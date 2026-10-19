@@ -121,7 +121,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .tipo .ft img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
 .tipo:hover .ft img{transform:scale(1.07)}
 .tipo .et{position:absolute;left:14px;top:14px;font-family:var(--tit);font-size:20px;color:var(--marino);padding:4px 14px;border-radius:999px;border:3px solid #fff}
-.tipo .cu{padding:20px 22px 24px;display:grid;gap:8px;flex:1}
+.tipo .cu{padding:20px 22px 24px;display:grid;gap:8px;flex:1;grid-template-rows:auto 1fr auto}
 .tipo h3{font-size:30px}
 .tipo button{justify-self:start;margin-top:auto;font:800 17px var(--txt);background:var(--sol);color:var(--marino);border:0;border-radius:999px;padding:9px 18px;cursor:pointer;box-shadow:0 5px 0 #d9a319;transition:transform .15s}
 .tipo button:hover{transform:translateY(-2px)}
@@ -166,6 +166,7 @@ input:focus,select:focus{outline:none;border-color:var(--cielo)}
 
 /* faq */
 .faq{max-width:760px;margin:0 auto;display:grid;gap:12px}
+#preguntas .cab{margin-bottom:30px}
 details{background:var(--papel);border-radius:22px;overflow:hidden}
 summary{list-style:none;cursor:pointer;padding:18px 58px 18px 22px;font-weight:800;font-size:19px;color:var(--marino);position:relative}
 summary::-webkit-details-marker{display:none}
@@ -186,6 +187,7 @@ footer{padding-block:34px 110px;text-align:center;color:var(--marino);display:gr
 /* flotante */
 .flota{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;padding:13px 20px;font-size:19px;transition:opacity .3s,transform .3s}
 .flota.oculto{opacity:0;pointer-events:none;transform:translateY(20px)}
+@media (max-width:760px){.flota{width:60px;height:60px;padding:0;border-radius:50%;justify-content:center}.flota .flt{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.flota svg{width:28px;height:28px;margin:0}}
 
 /* aparición al bajar (sin ocultar: solo desplazamiento) */
 .js .rev{transform:translateY(34px) scale(.98);transition:transform .7s cubic-bezier(.34,1.56,.64,1)}
@@ -251,16 +253,18 @@ footer{padding-block:34px 110px;text-align:center;color:var(--marino);display:gr
   <div class="wrap">
     <div class="cab rev"><h2>¿Qué estás celebrando?</h2><p>Patio, cancha, parqueo o salón: si es plano, armamos la pista.</p></div>
     <div class="tipos">
-      <article class="tipo rev"><div class="ft"><img src="media/cumple.jpg" alt="Dos niñas manejando go karts de pedal en una cancha" loading="lazy"><span class="et" style="background:var(--chicle)">Cumpleaños</span></div><div class="cu"><h3>¡Su día, su Gran Premio!</h3><p>Convierte su cumple en una aventura con carreras y muchas sonrisas.</p><button type="button" data-tipo="Cumpleaños">Cotizar cumple</button></div></article>
-      <article class="tipo rev"><div class="ft"><img src="media/colegio.jpg" alt="Niño manejando un go kart entre conos en un colegio" loading="lazy"><span class="et" style="background:var(--menta)">Colegios</span></div><div class="cu"><h3>Un recreo fuera de serie</h3><p>Llevamos la pista a tu colegio o guardería. Emitimos factura.</p><button type="button" data-tipo="Colegio">Cotizar colegio</button></div></article>
+      <article class="tipo rev"><div class="ft"><img src="media/cumple.jpg" alt="Niño con traje de piloto listo en su kart azul" loading="lazy"><span class="et" style="background:var(--chicle)">Cumpleaños</span></div><div class="cu"><h3>¡Su día, su Gran Premio!</h3><p>Convierte su cumple en una aventura con carreras y muchas sonrisas.</p><button type="button" data-tipo="Cumpleaños">Cotizar cumple</button></div></article>
+      <article class="tipo rev"><div class="ft"><img src="media/colegio.jpg" alt="Niños en karts de pedal en la cancha de un colegio durante su fin de ciclo" loading="lazy"><span class="et" style="background:var(--menta)">Colegios</span></div><div class="cu"><h3>Un recreo fuera de serie</h3><p>Llevamos la pista a tu colegio o guardería. Emitimos factura.</p><button type="button" data-tipo="Colegio">Cotizar colegio</button></div></article>
       <article class="tipo rev"><div class="ft"><img src="media/familia.jpg" alt="Go karts en fila bajo banderines de colores en un parque" loading="lazy"><span class="et" style="background:var(--sol);color:var(--marino)">Family day</span></div><div class="cu"><h3>Los peques también compiten</h3><p>Sorprende a las familias de tu equipo con su propia carrera.</p><button type="button" data-tipo="Family day">Cotizar family day</button></div></article>
     </div>
   </div>
 </section>
 
-<section id="videos">
+<section id="videos" style="padding-bottom:40px">
   <div class="wrap"><div class="cab rev"><h2>Mira a los peques en acción</h2><p>Videos reales de nuestras carreras. Desliza para ver más.</p></div></div>
   <div class="clips" id="clips">
+    <div class="clip"><video data-src="media/c7.mp4" poster="media/c7.jpg" muted loop playsinline preload="none" aria-hidden="true"></video><span>Fin de ciclo en el colegio</span></div>
+    <div class="clip"><video data-src="media/c8.mp4" poster="media/c8.jpg" muted loop playsinline preload="none" aria-hidden="true"></video><span>¡Así celebran los peques!</span></div>
     <div class="clip"><video data-src="media/c1.mp4" poster="media/c1.jpg" muted loop playsinline preload="none" aria-hidden="true"></video><span>Cada peque escoge su kart</span></div>
     <div class="clip"><video data-src="media/c2.mp4" poster="media/c2.jpg" muted loop playsinline preload="none" aria-hidden="true"></video><span>Carrera en el colegio</span></div>
     <div class="clip"><video data-src="media/c3.mp4" poster="media/c3.jpg" muted loop playsinline preload="none" aria-hidden="true"></video><span>¡Hasta los papás ayudan!</span></div>
@@ -337,7 +341,7 @@ footer{padding-block:34px 110px;text-align:center;color:var(--marino);display:gr
 
 <a class="btn flota oculto js-wa" id="flota" data-origen="flotante" href="https://wa.me/50242398238?text=Hola%20Funny%20Ride%2C%20quiero%20cotizar%20go%20karts." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
-  WhatsApp
+  <span class="flt">WhatsApp</span>
 </a>
 
 <script>
@@ -346,8 +350,8 @@ footer{padding-block:34px 110px;text-align:center;color:var(--marino);display:gr
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
   var $=function(i){return document.getElementById(i)};
   // cintas
-  var fotos=['m1','m2','m6','m4','m10','m5','m8','m7','m3','m9'];
-  var alts={m1:'Niño con traje de piloto en su kart',m2:'Niña sonriendo en un kart rojo',m6:'Dos niñas manejando karts',m4:'Karts bajo banderines',m10:'Niña manejando en el colegio',m5:'Karts naranjas en la cancha',m8:'Niños corriendo en la cancha',m7:'Karts en el parque',m3:'Fila de karts listos',m9:'Karts naranjas de cerca'};
+  var fotos=['m11','m1','m12','m4','m13','m10','m5','m14','m7','m3','m9'];
+  var alts={m11:'Niño feliz en su kart verde en el fin de ciclo de su colegio',m12:'Niña con lentes lista en la parrilla de salida',m13:'Dos niñas corriendo en la cancha de un colegio',m14:'Niña sonriendo en su kart en un fin de ciclo',m1:'Niño con traje de piloto en su kart',m2:'Niña sonriendo en un kart rojo',m6:'Dos niñas manejando karts',m4:'Karts bajo banderines',m10:'Niña manejando en el colegio',m5:'Karts naranjas en la cancha',m8:'Niños corriendo en la cancha',m7:'Karts en el parque',m3:'Fila de karts listos',m9:'Karts naranjas de cerca'};
   var h=''; for(var r=0;r<2;r++){ fotos.forEach(function(f){ h+='<figure class="pola" style="margin:0"><img src="media/'+f+'.jpg" alt="'+(r?'':alts[f])+'" loading="lazy"'+(r?' aria-hidden="true"':'')+'></figure>'; }); }
   $('fotos').innerHTML=h;
   var fr=['¡Cumpleaños!','Colegios','Family day','Karts de pedal','3 a 8 años','Operador incluido','Llevamos la pista'];
@@ -368,7 +372,7 @@ footer{padding-block:34px 110px;text-align:center;color:var(--marino);display:gr
   render();
   // botón flotante
   var heroBtn=document.querySelector('.hero .btn'), fl=$('flota');
-  if('IntersectionObserver' in window){ new IntersectionObserver(function(e){ fl.classList.toggle('oculto', e[0].isIntersecting); }).observe(heroBtn); } else { fl.classList.remove('oculto'); }
+  if('IntersectionObserver' in window){ var vis=new Set(); var ob=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) vis.add(e.target); else vis.delete(e.target); }); fl.classList.toggle('oculto', vis.size>0); }); [heroBtn, document.querySelector('#cotizar .btn'), document.querySelector('.cierre .btn')].forEach(function(el){ if(el) ob.observe(el); }); } else { fl.classList.remove('oculto'); }
   // aparición + contadores
   function cuenta(el){ var n=+el.dataset.n, i=0, t0=null; if(reduce||!n){return;} el.textContent='0';
     function paso(ts){ if(!t0)t0=ts; var p=Math.min(1,(ts-t0)/900); el.textContent=Math.round(n*(1-Math.pow(1-p,3))); if(p<1) requestAnimationFrame(paso); } requestAnimationFrame(paso); }

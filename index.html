@@ -23,6 +23,13 @@
 <meta name="twitter:title" content="Funny Ride Go Karts · Go karts para fiestas infantiles en Guatemala">
 <meta name="twitter:description" content="Go karts de pedal para peques de 3 a 8 años, a domicilio en Guatemala.">
 <meta name="twitter:image" content="https://josemarroquin.me/funny-ride/media/hero.jpg">
+<script>
+/* Pixel de Meta: poner el ID entre comillas para activarlo */
+var FR_PIXEL='';
+if(FR_PIXEL){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init',FR_PIXEL);fbq('track','PageView');
+document.addEventListener('DOMContentLoaded',function(){var cot=document.getElementById('cotizar');if(cot&&'IntersectionObserver'in window){var io=new IntersectionObserver(function(x){if(x[0].isIntersecting){fbq('track','ViewContent',{content_name:'cotizador'});io.disconnect();}});io.observe(cot);}});}
+</script>
 <script type="application/ld+json">
 [
  {

@@ -1,0 +1,407 @@
+<!doctype html><html><head><meta charset=utf8><meta name="robots" content="noindex,nofollow"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Funny Ride Temporada de Carreras</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Baloo+2:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: transmisión de carreras — encabezado con fichas, calendario mensual con códigos, semanas con tarjetas de pieza */
+:root{
+  --bg:#FFF7E8; --panel:#FFFFFF; --panel2:#F6EBD6; --line:#EADFC8; --fg:#1E2A5A; --mute:#6B6F8E;
+  --red:#FF3B3B; --cone:#FFC93C; --ok:#3DDC97; --warn:#FFC93C; --todo:#B9B3A6; --shoot:#3DB2FF; --ink:#1E2A5A; --white:#ffffff; --pink:#FF8FC7; --sky:#3DB2FF;
+  --disp:"Lilita One","Arial Rounded MT Bold",system-ui,sans-serif;
+  --txt:"Baloo 2",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--txt);font-size:15px;line-height:1.5;margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 60px}
+h1,h2,h3{font-family:var(--disp);font-weight:400;letter-spacing:.01em;line-height:.95;text-wrap:balance;margin:0}
+.bug{display:inline-flex;align-items:stretch;font-family:var(--disp);font-weight:700;font-size:15px;letter-spacing:.08em;text-transform:uppercase}
+.bug span{padding:4px 12px}.bug .live{border-radius:999px 0 0 999px}.bug .gp{border-radius:0 999px 999px 0;border:1px solid var(--line)}.bug .live{background:var(--red);color:var(--white)}.bug .live::before{content:"● "}.bug .gp{background:var(--white);color:var(--ink)}
+header{display:grid;gap:18px;padding-bottom:26px;border-bottom:1px solid var(--line)}
+header h1{font-size:clamp(44px,8vw,92px)}
+header h1 em{font-style:normal;color:var(--red)}
+.lede{color:var(--mute);max-width:68ch;margin:0}
+.stats{display:flex;flex-wrap:wrap;gap:8px}
+.stat{background:var(--panel);border:1px solid var(--line);padding:8px 14px;display:flex;gap:8px;align-items:baseline}
+.stat b{font-family:var(--disp);font-size:28px;line-height:1;font-variant-numeric:tabular-nums}
+.stat small{color:var(--mute);font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;gap:4px;overflow-x:auto;padding-block:10px;border-bottom:1px solid var(--line);margin-bottom:8px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+nav.tabs a{flex:none;color:var(--mute);text-decoration:none;font-family:var(--disp);font-weight:700;font-size:17px;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px}
+nav.tabs a:hover,nav.tabs a:focus-visible{color:var(--fg);background:var(--panel);outline:none}
+section{padding-block:26px;border-bottom:1px solid var(--line);scroll-margin-top:64px}
+.sec-h{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.sec-h h2{font-size:clamp(30px,5vw,44px)}
+.tag{font-family:var(--disp);font-weight:400;border-radius:999px;background:var(--cone);color:var(--ink);padding:2px 9px;font-size:15px;letter-spacing:.06em;text-transform:uppercase}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:16px 18px;min-width:0}
+.box h3{font-size:22px;margin-bottom:8px}
+.box p,.box li{color:var(--fg);opacity:.86;margin:0 0 6px}
+.box ul{margin:0;padding-left:18px}
+.mix{display:grid;gap:10px}
+.bar{display:grid;grid-template-columns:140px 1fr 44px;gap:10px;align-items:center;font-size:14px}
+.bar i{display:block;height:10px;background:var(--panel2)}.bar i b{display:block;height:100%;background:var(--red)}
+.bar span:last-child{text-align:right;font-variant-numeric:tabular-nums;color:var(--mute)}
+.months{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,500px),1fr));gap:18px}
+.month h3{font-size:26px;margin-bottom:8px}
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px}
+.cal .dow{font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.08em;padding:2px 4px}
+.day{background:var(--panel);border-radius:10px;min-height:74px;padding:5px;display:flex;flex-direction:column;gap:3px;min-width:0}
+.day.off{background:transparent}
+.day.today{outline:2px solid var(--red)}
+.day .n{font-size:12px;color:var(--mute);font-variant-numeric:tabular-nums}
+.code{display:block;font-family:var(--disp);font-weight:400;font-size:14px;letter-spacing:.02em;padding:1px 6px;border-radius:6px;text-decoration:none;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.code.reel{background:var(--red);color:var(--white)}.code.post,.code.carr{background:var(--sky);color:var(--white)}.code.hist{background:var(--cone)}
+.code.crec{background:var(--pink);color:var(--ink)}
+.code.pend{opacity:.5}
+.filt{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}.filt button{font:700 14px var(--txt);border:1px solid var(--line);background:var(--panel);color:var(--fg);border-radius:999px;padding:6px 14px;cursor:pointer}.filt button[aria-pressed=true]{background:var(--fg);color:var(--white);border-color:var(--fg)}.filt button:focus-visible{outline:2px solid var(--cone)}
+body.f-com .is-crec,body.f-crec .is-com{display:none!important}
+.lane{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;border-radius:999px;padding:2px 8px;background:var(--pink);color:var(--ink)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:12px;font-size:13px;color:var(--mute)}
+.legend span{display:inline-flex;gap:6px;align-items:center}.legend i{width:12px;height:12px;display:inline-block}
+.week-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.week-h p{margin:0;color:var(--mute)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:16px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;min-width:0;scroll-margin-top:70px}
+.card:target{outline:2px solid var(--cone)}
+.c-top{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.c-top .code{font-size:18px;padding:1px 8px}
+.c-top .when{font-size:13px;color:var(--mute);font-variant-numeric:tabular-nums}
+.chip{border-radius:999px;font-size:11px;text-transform:uppercase;letter-spacing:.08em;border:1px solid var(--line);padding:2px 7px;color:var(--fg)}
+.st{margin-left:auto;border-radius:999px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;padding:2px 8px}
+.st.ok{background:var(--ok);color:var(--ink)}.st.warn{background:var(--warn);color:var(--ink)}.st.todo{background:var(--panel2);color:var(--mute);border:1px solid var(--line)}.st.shoot{background:var(--shoot);color:var(--ink)}
+.media{position:relative;background:#111;aspect-ratio:3/4;max-width:100%;overflow:hidden}
+.media.v{aspect-ratio:9/16}
+.media img,.media video{width:100%;height:100%;object-fit:contain;display:block}
+.nav{position:absolute;top:50%;transform:translateY(-50%);width:36px;height:36px;border:0;border-radius:50%;background:var(--ink);opacity:.82;color:var(--white);font-size:22px;cursor:pointer}
+.nav:hover{opacity:1}.nav:focus-visible{outline:2px solid var(--cone)}
+.nav.p{left:8px}.nav.n{right:8px}
+.count{position:absolute;right:8px;top:8px;background:var(--ink);color:var(--white);font-size:12px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.ph{aspect-ratio:3/4;max-width:100%;background:repeating-linear-gradient(135deg,var(--panel2) 0 14px,var(--panel) 14px 28px);display:flex;flex-direction:column;justify-content:flex-end;padding:16px;gap:6px}
+.ph b{font-family:var(--disp);font-size:26px;text-transform:uppercase;line-height:1}
+.ph small{color:var(--mute)}
+.c-body{padding:12px 14px 14px;display:grid;gap:10px;min-width:0}
+.c-body h3{font-size:24px}
+.lbl{display:block;font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.1em;margin-bottom:2px}
+.main{font-family:var(--disp);font-size:19px;line-height:1.15;color:var(--red)}
+.cap{position:relative;border-radius:14px;background:var(--bg);border:1px solid var(--line);padding:30px 12px 10px;white-space:pre-wrap;font-size:13.5px;max-height:220px;overflow:auto;overflow-wrap:anywhere}
+.copy{position:absolute;top:6px;right:6px;background:var(--fg);color:var(--white);border-radius:999px;border:0;font:600 12px var(--txt);padding:3px 10px;cursor:pointer}
+.copy:focus-visible,.btn:focus-visible{outline:2px solid var(--cone)}
+.note{font-size:13px;color:var(--mute)}
+.file{font-size:12px;color:var(--mute);overflow-wrap:anywhere}
+textarea{width:100%;min-height:56px;background:var(--bg);color:var(--fg);border:1px dashed var(--line);font:13px var(--txt);padding:8px;resize:vertical}
+textarea:focus{outline:none;border-color:var(--cone)}
+.btn{background:var(--red);color:var(--white);border:0;border-radius:999px;font:700 14px var(--txt);padding:10px 16px;cursor:pointer}
+.ads{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:10px;margin-bottom:14px}
+.kpi b{display:block;font-family:var(--disp);font-size:40px;line-height:1;font-variant-numeric:tabular-nums}
+.kpi span{font-size:13px;color:var(--mute)}
+.table-wrap{overflow-x:auto;margin-bottom:12px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:560px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--mute);font-weight:600}
+td:first-child{white-space:nowrap;font-variant-numeric:tabular-nums}
+.check{padding-left:0!important}
+.check li{list-style:none;padding-left:24px;position:relative}
+.check li::before{content:"";position:absolute;left:0;top:6px;width:12px;height:12px;border:2px solid var(--cone)}
+footer{color:var(--mute);font-size:13px;padding-top:20px}
+@media (max-width:520px){.day{min-height:60px;padding:3px}.code{font-size:12px;padding:1px 3px}.bar{grid-template-columns:100px 1fr 38px}}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="bug"><span class="live">Peques al volante</span><span class="gp">Funny Ride Go Karts</span></div>
+  <h1>Temporada de <em>carreras</em><br>16 oct – 31 dic</h1>
+  <p class="lede"><b>Versión 9 (25 oct):</b> se suma el carril de crecimiento, en rosa: una pieza diaria sin venta (memes, carruseles guardables y reels tiernos) para mamás y papás, con prioridad a la vida en casa y lo de colegio solo en la semana de clausuras. Hasta el 13 dic sale una pieza diaria y del 14 al 31 dic, 3 por semana. Versión 7: se sumó el material del fin de ciclo de un colegio (2 reels, carrusel, post y 3 historias) y se adelantó en octubre. Versión 6: fotos re-iluminadas (más luz, realistas), ilustraciones de fechas especiales más limpias, P01–P08 y R01–R10 ya programados en Meta. Todo el contenido de octubre a diciembre está producido, y la web ya está en línea. Look infantil: color tratado, tomas estabilizadas, música y fotos de todos los eventos (cumple Spiderman, parque de febrero, MAO). Calendario de redes, piezas producidas y pauta de Funny Ride Go Karts. Cada tarjeta trae su vista previa, el texto del post con botón para copiar y un espacio para que anotes cambios. Todos los archivos finales están en tu carpeta Documents.</p>
+  <div class="stats" id="stats"></div>
+</header>
+
+<nav class="tabs" aria-label="Secciones">
+  <a href="#plan">Plan</a><a href="#crecimiento">Crecimiento</a><a href="#calendario">Calendario</a><a href="#s1">16–22 oct</a><a href="#s2">23–31 oct</a><a href="#s3">1–8 nov</a><a href="#s4">9–22 nov</a><a href="#s5">23–30 nov</a><a href="#s6">1–13 dic</a><a href="#s7">14–31 dic</a><a href="#pauta">Pauta</a><a href="#web">Web</a><a href="#revisar">Para revisar</a>
+</nav>
+
+<section id="plan">
+  <div class="sec-h"><h2>El plan</h2><span class="tag">Peques al volante</span></div>
+  <div class="grid2">
+    <div class="box"><h3>Objetivo</h3><p>Llenar las fechas de vacaciones, colegios y convivios de fin de año con conversaciones de WhatsApp (4239-8238) que terminen en eventos apartados con anticipo.</p></div>
+    <div class="box"><h3>Concepto</h3><p>"Peques al volante": un negocio para chiquitines. Fotos y videos reales de nuestros eventos, más brillantes y coloridos, con textos tipo sticker, confeti, bandera a cuadros ondulada y un ritmo alegre con efectos de sonido (pop, boing, bocina). Siempre se repite: karts de pedal para peques de 3 a 8 años.</p></div>
+    <div class="box"><h3>Mezcla de contenido</h3><div class="mix">
+      <div class="bar"><span>La carrera</span><i><b style="width:40%"></b></i><span>40 %</span></div>
+      <div class="bar"><span>Cómo funciona</span><i><b style="width:25%"></b></i><span>25 %</span></div>
+      <div class="bar"><span>Prueba social</span><i><b style="width:20%"></b></i><span>20 %</span></div>
+      <div class="bar"><span>Comunidad</span><i><b style="width:15%"></b></i><span>15 %</span></div>
+    </div></div>
+    <div class="box"><h3>Horarios sugeridos</h3><ul>
+      <li>Reels: 7:00 p. m. entre semana, 10:00 a. m. sábado y domingo.</li>
+      <li>Posts y carruseles: 12:30 p. m.</li>
+      <li>Historias: repartidas de 9:00 a. m. a 8:00 p. m.</li>
+      <li>Cada reel sale en Instagram y Facebook, y en TikTok con el mp4 original.</li></ul></div>
+    <div class="box"><h3>Reglas del sistema</h3><ul>
+      <li>Titulares en Lilita One con borde azul marino tipo sticker; textos en Baloo 2.</li>
+      <li>Paleta: rojo cereza, amarillo sol, azul cielo, verde menta, rosa chicle y fondo crema.</li>
+      <li>Videos con corrección de color y estabilización; cortes al ritmo de la música.</li>
+      <li>El texto nunca va encima de niños ni karts.</li>
+      <li>Una foto usada en historia no se repite en post.</li>
+      <li>Cierre fijo: fondo crema con confeti, logo, sello "3 a 8 años" y botón de WhatsApp.</li>
+      <li>Peter y Patrick solo en fechas especiales.</li></ul></div>
+    <div class="box" id="crecimiento"><h3>Carril de crecimiento <span class="lane">Nuevo</span></h3><ul>
+      <li>Objetivo: envíos, guardados y seguidores entre mamás y papás de Guatemala. No vende nada; el logo va chico.</li>
+      <li>Prioridad a la casa: 44 piezas de casa o fechas chapinas y solo 5 de colegio. Desde el 9 nov todo gira a vacaciones, Navidad y familia.</li>
+      <li>Papás protagonistas en 10 piezas.</li>
+      <li>Formato: ilustración 3D completa con el texto encima, grande y con contorno. Los karts siempre son iguales a los reales.</li>
+      <li>Prueba del 26 oct al 22 nov. Ese día se quita lo que menos funcionó y se repite lo que más se compartió (espacios «Ganador»).</li>
+      <li>Memes a las 8:30 p. m. y carruseles a las 12:30 p. m., sin chocar con los reels comerciales de las 7:00 p. m.</li></ul></div>
+    <div class="box"><h3>Qué medimos</h3><ul>
+      <li>Conversaciones de WhatsApp por semana y cuántas se vuelven evento.</li>
+      <li>Costo por conversación en pauta (septiembre: Q13.30).</li>
+      <li>Envíos y guardados por reel.</li>
+      <li>Retención a 3 s de cada reel, para escoger cuál pautar.</li></ul></div>
+  </div>
+</section>
+
+<section id="calendario">
+  <div class="sec-h"><h2>Calendario</h2></div>
+  <div class="filt" role="group" aria-label="Filtrar"><button type="button" data-f="all" aria-pressed="true">Todo</button><button type="button" data-f="com" aria-pressed="false">Comercial</button><button type="button" data-f="crec" aria-pressed="false">Crecimiento</button></div>
+  <div class="months" id="months"></div>
+  <div class="legend">
+    <span><i style="background:var(--red)"></i>Reel</span><span><i style="background:var(--sky)"></i>Post o carrusel</span><span><i style="background:var(--cone)"></i>Historias</span><span><i style="background:var(--pink)"></i>Crecimiento (sin venta)</span><span>Toca un código para ir a su tarjeta.</span>
+  </div>
+</section>
+
+<div id="weeks"></div>
+
+<section id="pauta">
+  <div class="sec-h"><h2>Pauta en Meta</h2><span class="tag">Objetivo: WhatsApp</span></div>
+  <div class="ads">
+    <div class="box kpi"><b>Q13.30</b><span>Costo por conversación en septiembre (12 por Q159.58). Agosto cerró en Q8.32.</span></div>
+    <div class="box kpi"><b>Q4.96–7.63</b><span>Rango de las campañas que mejor han funcionado: reel promocionado desde Instagram.</span></div>
+    <div class="box kpi"><b>0</b><span>Pixels de Meta en la cuenta. La web no mide conversiones hasta crear uno.</span></div>
+  </div>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Fechas</th><th>Qué se pauta</th><th>Mensaje</th></tr></thead>
+    <tbody>
+      <tr><td>17–30 oct</td><td>R01 promocionado desde Instagram · Q10/día · WhatsApp + DM · público Papás GT 25-45 FR (activo, en revisión)</td><td>Cumple en vacaciones y colegios</td></tr>
+      <tr><td>1–15 nov</td><td>El reel con mejor retención entre R01, R02 y R03</td><td>Cumple en vacaciones · Family day</td></tr>
+      <tr><td>16–30 nov</td><td>Anuncio ganador + R11 resumen del año</td><td>Aparta diciembre</td></tr><tr><td>1–15 dic</td><td>R13 Diciembre se llena + R14 Posadas</td><td>Posadas de colegio, empresa y familia</td></tr><tr><td>26–31 dic</td><td>R17 Arranca enero</td><td>Cumples de enero y regreso a clases</td></tr>
+    </tbody></table></div>
+  <p class="note">Un anuncio por conjunto, sin precio en el copy, sin Messenger. El presupuesto lo defines tú; concentrarlo en menos días rinde más que repartirlo.</p>
+  <div class="cards" id="adcopies"></div>
+</section>
+
+<section id="web">
+  <div class="sec-h"><h2>Web de conversión</h2><span class="st ok" style="margin:0">En línea</span></div>
+  <div class="grid2">
+    <div class="box"><h3>Dónde está</h3><p><a href="https://josemarroquin.me/funny-ride/" target="_blank" rel="noopener">josemarroquin.me/funny-ride</a>. Publicada con GitHub Pages desde el repositorio funny-ride de tu cuenta; tu dominio josemarroquin.me ya estaba conectado, así que quedó ahí. Gratis y sin vencimiento.</p></div>
+    <div class="box"><h3>Qué trae</h3><p>Video arriba con tomas de los tres eventos, galería en movimiento, pasos, celebraciones, clips, preguntas de papás y armador de mensaje de WhatsApp. Úsala como enlace en la bio de Instagram y en los anuncios.</p></div>
+    <div class="box" style="padding:10px"><img src="m3/web_m.png" alt="Vista de la web en celular" style="border-radius:14px;display:block;margin:0 auto;max-height:640px"></div>
+  </div>
+</section>
+
+<section id="revisar">
+  <div class="sec-h"><h2>Para revisar</h2></div>
+  <div class="grid2">
+    <div class="box"><h3>De tu lado</h3><ul class="check">
+      <li>Escuchar los reels con audífonos y decirme si algún efecto de sonido sobra.</li>
+      <li>Confirmar el permiso del MAO para usar videos con niños en pauta.</li>
+      <li>Crear el Pixel de Meta y pasarme el ID para medir la web.</li>
+      <li>Validar las respuestas de la web sobre lluvia, espacio y zonas.</li>
+      <li>Definir presupuesto de pauta y la oferta de Viernes Negro.</li>
+      <li>Si quieres un testimonio de papás, grábalo en el próximo evento y lo sumo como reel extra.</li></ul></div>
+    <div class="box"><h3>Por decidir (25 oct)</h3><ul class="check">
+      <li>Halloween: P03, R05, H06 y H07 ya están programados; la estrategia de crecimiento proponía evitarlo porque muchas familias evangélicas lo rechazan. ¿Se quedan o se cambian?</li>
+      <li>P08 «Tu colegio también corre» (11 nov): los colegios ya están de vacaciones; propuesta, pasarlo a enero y publicar P14 en su lugar.</li>
+      <li>H11 (19 nov): cambiar la opción «Actividad del cole» por «Una posada».</li>
+      <li>P15 y la pauta del 1 al 15 dic: decir «familias, guarderías y empresas» en lugar de «colegios».</li></ul></div>
+    <div class="box"><h3>Notas</h3><ul>
+      <li>Música: pistas del stock de Magnific (incluido en tu cuenta, sin gastar créditos) y de Pixabay (libre para uso comercial). No bajé música de YouTube: descargar de ahí va contra sus condiciones y muchas pistas "sin copyright" igual piden licencia o atribución. Si quieres una de la Biblioteca de audio de YouTube Studio, la bajas tú y la cambio.</li>
+      <li>Las pistas de Pixabay marcadas con Content ID pueden recibir reclamo en YouTube, no en Instagram ni Facebook.</li>
+      <li>Las versiones anteriores (estilo transmisión, R1 con voz) quedaron en _versiones_anteriores.</li>
+      <li>Las piezas que no tenían material se armaron con las tomas que ya existían; nada queda por grabar.</li><li>Copy de noviembre y diciembre con apoyo de tu ChatGPT; ajusté dos historias de diciembre para no repetir preguntas.</li></ul></div>
+    <div class="box"><h3>Tus cambios</h3><p>Lo que escribas en cada tarjeta se guarda en este navegador. Cuando termines, copia todo y pégamelo en el chat.</p>
+      <p><button class="btn" id="copyAll" type="button">Copiar todos mis cambios</button></p>
+      <p class="note" id="copyMsg" aria-live="polite"></p></div>
+  </div>
+</section>
+
+<footer>Plan actualizado el 25 de octubre de 2026. Cifras de pauta tomadas de la cuenta de Meta Ads de Funny Ride. Proyectos editables en Expansion / GO KARTS / _produccion_oct (After Effects y Premiere).</footer>
+</div>
+
+<script>
+const P=[
+ {c:'H01–04',d:'2026-10-16',t:'9:00 a. m. – 8:00 p. m.',k:'hist',f:'4 historias · video con música',s:'ok',sl:'Listas',ti:'¿Piloto o copiloto?',
+  main:'¿Tu peque es piloto o copiloto? · ¡Así se vive una carrera! · ¡Armamos la pista donde quieras! · Noviembre y diciembre se llenan',
+  m:{v:['h1','h2','h3','h4']},cap:'1. Historia 1: sticker de ENCUESTA debajo del titular. Opciones: "PILOTO 🏎️" / "COPILOTO 🙋"\n2. Historia 2: sin stickers\n3. Historia 3: sin stickers\n4. Historia 4: sticker de ENLACE sobre la pastilla "Aparta tu fecha"\n   https://wa.me/50242398238?text=Hola%20Funny%20Ride%2C%20quiero%20apartar%20una%20fecha',
+  capL:'Stickers',file:'FUNNY RIDE - SEMANA 16-22 OCT / FR_historia_1…4.mp4',note:'Tomas del cumple Spiderman, del parque y del MAO, con color tratado y estabilizadas. Música: Happy Ukulele Clappy (Pixabay).',w:1},
+ {c:'R01',d:'2026-10-17',t:'7:00 p. m.',k:'reel',f:'Reel · 19.5 s',s:'ok',sl:'Listo',ti:'¡La pista llega a tu fiesta!',
+  main:'3, 2, 1… ¡YA! · ¡Peques al volante! · ¡18 karts de pedal! · ¡Armamos tu pista!',m:{v:['reel1']},
+  cap:'3, 2, 1… ¡a correr! 🏁🏎️\nKarts de pedal para peques de 3 a 8 años: llevamos la pista, los conos y el operador a tu cumple, colegio o family day.\n\n📲 Cotiza por WhatsApp: 4239-8238\n#GoKartsGuatemala #FiestasInfantilesGuatemala #CumpleañosGuatemala #FunnyRideGoKarts',
+  file:'FUNNY RIDE - REELS / FR_REEL1_LA_PISTA_LLEGA.mp4',note:'Mezcla tres eventos. Música: Shangy The Bat (stock Magnific) con pops, boing y bocina. Es el reel que se pauta primero. La versión anterior con la voz de Pari Patel quedó en _versiones_anteriores.',w:1},
+ {c:'P01',d:'2026-10-18',t:'12:30 p. m.',k:'carr',f:'Carrusel · 4 láminas 3:4',s:'ok',sl:'Listo',ti:'¡Tu fiesta tiene pista!',
+  main:'¡Tu fiesta tiene pista! · ¡18 karts de pedal! · ¡Armamos tu pista! · Tú pones los peques',
+  m:{i:['carrusel_incluye_1','carrusel_incluye_2','carrusel_incluye_3','carrusel_incluye_4']},
+  cap:'Esto es lo que llega a tu fiesta 🏁\n\n18 go karts de pedal para niños de 3 a 8 años, un circuito armado con 50 conos y un operador que dirige la carrera de principio a fin. El transporte, el montaje y el desmontaje van incluidos.\n\nTú pones el lugar y los pilotos. Nosotros, lo demás.\n\n📲 Cotiza por WhatsApp: 4239-8238\n\n#GoKartsGuatemala #FiestasInfantilesGuatemala #CumpleañosGuatemala #FunnyRideGoKarts #PlanesConNiñosGT',
+  file:'FUNNY RIDE - SEMANA 16-22 OCT / FR_carrusel_incluye_1…4.jpg',w:1},
+ {c:'R02',d:'2026-10-19',t:'7:00 p. m.',k:'reel',f:'Reel · 14.6 s',s:'ok',sl:'Listo',ti:'¿Cuánto tardamos en armar la pista?',
+  main:'8:00 · 8:01 · 8:07 · 8:39 · 8:47 ¡A correr!',m:{v:['reel2']},
+  cap:'8:00 llegamos. 8:47 ya estaban corriendo ⏱️🏁\nTú pones el lugar: patio, cancha, parqueo o salón. Nosotros, la pista.\n📲 4239-8238\n#GoKartsGuatemala #FiestasInfantilesGuatemala #FunnyRideGoKarts',
+  file:'FUNNY RIDE - REELS / FR_REEL2_ARMAMOS_LA_PISTA.mp4',note:'Horas reales del MAO. Música: Yajoh (stock Magnific).',w:1},
+ {c:'H05',d:'2026-10-20',t:'Durante el día',k:'hist',f:'Historias · encuesta',s:'ok',sl:'Listo',ti:'¿Qué color escoge tu peque?',main:'¿Qué color escogería tu piloto?',m:{v:['h05']},cap:'Encuesta: Rosa / Verde / Azul / Naranja\nCaja de preguntas: "Pregúntanos lo que quieras de los go karts"',capL:'Stickers',note:'Historia 6 s. Pon el sticker de encuesta debajo del titular.',file:'FUNNY RIDE - SEMANA 16-22 OCT / FR_H05_que_color.mp4',w:1},
+ {c:'RC1',d:'2026-10-20',t:'7:00 p. m.',k:'reel',f:'Reel · 17.4 s · NUEVO',s:'ok',sl:'Programado',ti:'¡Fin de ciclo a toda velocidad!',main:'¡Fin de ciclo a toda velocidad! · ¡Directo a la meta! · ¿Tu colegio cierra el ciclo?',m:{v:['rc1']},cap:'¡Fin de ciclo a toda velocidad! 🏁\nAsí cerró el año un colegio: carreras por turnos, porras y muchas sonrisas sobre ruedas.\nLlevamos 18 go karts de pedal, armamos el circuito y nuestro operador dirige la pista. Emitimos factura.\n¿Tu colegio o guardería cierra el ciclo? Cotiza por WhatsApp al 4239-8238 📲\n#FunnyRide #FinDeCiclo #ColegiosGuatemala #Promocion2026 #GoKartsGuatemala',file:'FUNNY RIDE - COLEGIO FIN DE CICLO / FR_REEL_RC1_FIN_DE_CICLO.mp4',note:'Material del colegio (con permiso del colegio y de los papás), en clips sueltos sin audio original. Música: Funny Ukulele (Pixabay). Ya programado en Meta.',w:1},
+ {c:'PC1',d:'2026-10-21',t:'12:30 p. m.',k:'carr',f:'Carrusel · 5 láminas 3:4 · NUEVO',s:'ok',sl:'Programado',ti:'¡Fin de ciclo sobre ruedas!',main:'¡Fin de ciclo sobre ruedas! · ¡Pura emoción! · ¡Todos a la parrilla! · ¡Carreras por turnos! · ¿Tu cole cierra el ciclo?',m:{i:['pc1_1','pc1_2','pc1_3','pc1_4','pc1_5']},cap:'Una promoción que se celebró sobre ruedas 🎓🏎️\n\nDesliza y mira cómo vivieron los peques su último día del ciclo: parrilla de salida, carreras por turnos y una meta llena de globos.\n\nNosotros llevamos los karts, los conos y el operador. Ustedes ponen la cancha y los pilotos.\n📲 Cotiza tu clausura o día de campo: 4239-8238\n\n#FunnyRide #Promociones #Clausuras #ColegiosGuatemala #GoKartsGuatemala',file:'FUNNY RIDE - COLEGIO FIN DE CICLO / FR_PC1_carrusel_fin_de_ciclo_1…5.jpg',note:'Reemplaza a P02 (Cierren el ciclo), que quedó en Borradores de Meta.',w:1},
+ {c:'R04',d:'2026-10-22',t:'7:00 p. m.',k:'reel',f:'Reel · 18.4 s',s:'ok',sl:'Listo',ti:'Lo que más nos preguntan los papás',
+  main:'¿Desde qué edad? · ¿Llevan motor? · ¿Cuánto espacio? · ¿Quién los cuida?',m:{v:['reel4']},
+  cap:'Las preguntas que más nos hacen los papás 👇\n¿Desde qué edad? De 3 a 8 años.\n¿Llevan motor? No, puro pedal.\n¿Cuánto espacio? Un patio, cancha o salón.\n¿Quién los cuida? Nuestro operador de pista.\n¿Otra duda? Escríbenos al 4239-8238 📲\n#GoKartsGuatemala #FiestasInfantilesGuatemala #FunnyRideGoKarts',
+  file:'FUNNY RIDE - REELS / FR_REEL4_PREGUNTAS_DE_PAPAS.mp4',note:'Música: Cartoon Times (stock Magnific).',w:2},
+ {c:'HC1–3',d:'2026-10-23',t:'Durante el día',k:'hist',f:'3 historias · NUEVO',s:'ok',sl:'Listas',ti:'¿Tu peque se gradúa este año?',main:'¿Tu peque se gradúa este año? · ¡Así cerró el ciclo un cole! · ¿Y si tu cole hace lo mismo?',m:{v:['hc1','hc2','hc3']},cap:'HC1: sticker de ENCUESTA debajo del titular → "¡Sí, este año! 🎓" / "Todavía no 🙈"\nHC2: sin sticker\nHC3: sticker de ENLACE sobre la pastilla roja → https://wa.me/50242398238?text=Hola%20Funny%20Ride%2C%20quiero%20cotizar%20para%20mi%20colegio',capL:'Stickers',file:'FUNNY RIDE - COLEGIO FIN DE CICLO / FR_HC1…HC3.mp4',note:'Las subes desde el celular por los stickers.',w:2},
+ {c:'H06',d:'2026-10-24',t:'Durante el día',k:'hist',f:'Historias · cuenta regresiva',s:'ok',sl:'Listo',ti:'Faltan 7 días para Halloween',main:'¿Ya tienes fecha para su fiesta?',m:{v:['h06']},cap:'Sticker de cuenta regresiva "Halloween 31 oct" + enlace a WhatsApp.',capL:'Stickers',note:'Peque disfrazado del cumple de mayo. Música de Halloween (Pixabay).',file:'FUNNY RIDE - SEMANA 23-31 OCT / FR_H06_faltan_7_dias_halloween.mp4',w:2},
+ {c:'RC2',d:'2026-10-24',t:'10:00 a. m.',k:'reel',f:'Reel · 17.6 s · NUEVO',s:'ok',sl:'Programado',ti:'¡18 karts listos!',main:'¡18 karts listos! · Uno para cada piloto · ¡Y la pista la armamos nosotros!',m:{v:['rc2']},cap:'¡18 karts listos para tu evento! 🏁\nUno para cada piloto, la pista armada por nosotros y un operador cuidando cada vuelta. Funciona en patio, cancha o salón techado.\nAparta tu Gran Premio por WhatsApp al 4239-8238 📲\n#FunnyRide #GoKartsDePedal #FiestasInfantilesGuatemala #EventosEscolares',file:'FUNNY RIDE - COLEGIO FIN DE CICLO / FR_REEL_RC2_18_KARTS_LISTOS.mp4',note:'Ocupa el lugar de R03, que pasó al jueves 6 de noviembre. Música: Gummy Symphony (stock Magnific), otra sección. Ya programado.',w:2},
+ {c:'P03',d:'2026-10-25',t:'12:30 p. m.',k:'post',f:'Post · 3:4 · Peter y Patrick',s:'ok',sl:'Listo',ti:'¡Carrera de disfraces!',
+  main:'¡Carrera de disfraces!',m:{i:['post_halloween_carrera_disfraces']},
+  cap:'¡Este Halloween la carrera es con disfraz! 🎃👻\n\nPeter ya escogió ser calabaza y Patrick, fantasma. ¿De qué se disfrazaría tu piloto? Cuéntanos en los comentarios 👇\n\nSi tu fiesta es el 31 o en vacaciones, todavía hay fechas: llevamos los go karts, el circuito y el operador hasta tu casa.\n📲 WhatsApp 4239-8238\n\n#HalloweenGuatemala #FiestasInfantilesGuatemala #GoKartsGuatemala #FunnyRideGoKarts',
+  file:'FUNNY RIDE - SEMANA 23-31 OCT / FR_post_halloween_carrera_disfraces.jpg',note:'Peter y Patrick generados en tu ChatGPT a partir de los originales.',w:2},
+ {c:'R06',d:'2026-10-26',t:'7:00 p. m.',k:'reel',f:'Reel · 17.5 s',s:'ok',sl:'Listo',ti:'¡Un cumple sobre ruedas!',main:'¡Un cumple sobre ruedas!',m:{v:['r06']},cap:'Pastel, risas y una carrera que no van a olvidar. 🎂🏁\nLlevamos los go karts, armamos la pista y dirigimos la diversión.\n¿Se acerca su cumple? Escríbenos al WhatsApp 4239-8238. 💬\n#FunnyRide #CumpleañosInfantil #GoKartsDePedal #Guatemala',note:'Tomas del cumple de mayo. Música: Hooray For Today (stock Magnific).',file:'FUNNY RIDE - REELS / FR_REEL6_CUMPLE_SOBRE_RUEDAS.mp4',w:2},
+ {c:'P04',d:'2026-10-28',t:'12:30 p. m.',k:'carr',f:'Carrusel · 3 láminas 3:4',s:'ok',sl:'Listo',ti:'Antes de tu carrera',
+  main:'Antes de tu carrera · Solo necesitas · ¡Y a correr!',m:{i:['carrusel_checklist_1','carrusel_checklist_2','carrusel_checklist_3']},
+  cap:'¿Quieres una carrera de go karts en tu fiesta? Esto es todo lo que necesitas ✅\n\n✔️ Un espacio plano: patio, cancha, parqueo, salón o grama sintética\n✔️ Pilotos de 3 a 8 años (hasta 30 kg)\n✔️ Tu fecha apartada con 50 % de anticipo\n✔️ Ganas de correr 🏁\n\nNosotros llevamos los karts, los 50 conos, el operador de pista y el transporte.\n📲 Escríbenos al 4239-8238 y mándanos una foto del espacio.\n\n#FiestasInfantilesGuatemala #CumpleañosGuatemala #GoKartsGuatemala #FunnyRideGoKarts',
+  file:'FUNNY RIDE - SEMANA 23-31 OCT / FR_carrusel_checklist_1…3.jpg',w:2},
+ {c:'R07',d:'2026-10-29',t:'7:00 p. m.',k:'reel',f:'Reel · 15.6 s',s:'ok',sl:'Listo',ti:'Estas caritas lo dicen todo',main:'Estas caritas lo dicen todo',m:{v:['r07']},cap:'Esa sonrisa después de cruzar la meta. 🥹🏁\nMomentos pequeñitos que se convierten en recuerdos enormes.\nRegálales su propia carrera. Escríbenos por WhatsApp al 4239-8238.\n#FunnyRide #MiniPilotos #InfanciaFeliz #Guatemala',note:'Primeros planos de los tres eventos. Música: Happy Ukulele Children (Pixabay).',file:'FUNNY RIDE - REELS / FR_REEL7_ESTAS_CARITAS.mp4',w:2},
+ {c:'PC2',d:'2026-10-30',t:'12:30 p. m.',k:'post',f:'Post · 3:4 · NUEVO',s:'ok',sl:'Programado',ti:'¡Esta sonrisa no tiene meta!',main:'¡Esta sonrisa no tiene meta!',m:{i:['pc2']},cap:'Esta sonrisa no tiene meta 😄🏁\nPromociones, clausuras, días de campo o cumpleaños: la carrera llega a donde celebres.\nKarts de pedal para peques de 3 a 8 años, circuito y operador incluidos.\n📲 Aparta tu fecha: 4239-8238\n#FunnyRide #CumpleañosGuatemala #Clausuras #GoKartsGuatemala',file:'FUNNY RIDE - COLEGIO FIN DE CICLO / FR_PC2_post_sonrisa_sin_meta.jpg',w:2},
+ {c:'R05',d:'2026-10-31',t:'10:00 a. m.',k:'reel',f:'Reel · 11 s',s:'ok',sl:'Listo',ti:'¡Feliz Halloween, pilotos!',
+  main:'¡Feliz Halloween, pilotos! · ¿De qué se disfrazó tu peque?',m:{v:['reel5']},
+  cap:'¡Feliz Halloween, pilotos! 🎃👻 Peter y Patrick ya están listos para la carrera. ¿De qué se disfrazó tu peque? Mándanos su foto 👇\nTodavía hay fechas para vacaciones: 📲 4239-8238\n#HalloweenGuatemala #GoKartsGuatemala #FunnyRideGoKarts',
+  file:'FUNNY RIDE - REELS / FR_REEL5_HALLOWEEN.mp4',note:'Peter y Patrick con zoom lento y paso a un peque real con traje de piloto. Música: Halloween Kids (Pixabay).',w:2},
+ {c:'H07',d:'2026-10-31',t:'Durante el día',k:'hist',f:'Historias',s:'ok',sl:'Listo',ti:'Disfraces de la comunidad',main:'Comparte tu piloto disfrazado',m:{v:['h07']},cap:'Sticker "Agrega el tuyo" con la imagen de Peter y Patrick.',capL:'Stickers',note:'Agrega el sticker "Agrega el tuyo" sobre la pastilla naranja.',file:'FUNNY RIDE - SEMANA 23-31 OCT / FR_H07_disfraces.mp4',w:2},
+ {c:'P05',d:'2026-11-01',t:'12:30 p. m.',k:'post',f:'Post · 3:4',s:'ok',sl:'Listo',ti:'Día de Todos los Santos',
+  main:'Feliz Día de Todos los Santos',m:{i:['post_todos_los_santos']},cap:'Hoy es día de recordar y de estar en familia 💛\nFeliz Día de Todos los Santos de parte de Funny Ride Go Karts.',file:'FUNNY RIDE - SEMANA 1-8 NOV / FR_post_todos_los_santos.jpg',note:'Tono suave, sin venta.',w:3},
+ {c:'R08',d:'2026-11-02',t:'7:00 p. m.',k:'reel',f:'Reel · 16.3 s',s:'ok',sl:'Listo',ti:'Cada vuelta, bien acompañada',main:'Cada vuelta, bien acompañada',m:{v:['r08']},cap:'Go karts sin motor, circuito delimitado con conos y un operador que dirige las carreras. 🏁\nOrganizamos la diversión pensando en niños de 3 a 8 años, hasta 30 kg.\n¿Quieres conocer cómo funciona? Escríbenos al WhatsApp 4239-8238.\n#FunnyRide #GoKartsDePedal #DiversionInfantil #Guatemala',note:'Cuatro puntos de confianza con material que ya teníamos. Música: Playtime (Pixabay).',file:'FUNNY RIDE - REELS / FR_REEL8_CADA_VUELTA_ACOMPANADA.mp4',w:3},
+ {c:'H08',d:'2026-11-03',t:'Durante el día',k:'hist',f:'Historias · encuesta',s:'ok',sl:'Listo',ti:'¿Dónde armarías tu Gran Premio?',main:'¿Dónde armarías tu Gran Premio?',m:{v:['h08']},cap:'Encuesta: En el patio 🏡 / En una cancha ⚽\nCierre: ¡Mándanos foto de tu espacio por WhatsApp!',capL:'Stickers',file:'FUNNY RIDE - SEMANA 1-8 NOV / FR_H08_donde_tu_gran_premio.mp4',w:3},
+ {c:'P06',d:'2026-11-05',t:'12:30 p. m.',k:'carr',f:'Carrusel · 2 láminas 3:4',s:'ok',sl:'Listo',ti:'Family day con go karts',
+  main:'Family day con go karts · Lo montamos en tu empresa',m:{i:['carrusel_familyday_1','carrusel_familyday_2']},
+  cap:'¿Están organizando el convivio de fin de año? 🏁\n\nLlevamos un Gran Premio de go karts para los hijos de tu equipo: karts de pedal para niños de 3 a 8 años, circuito con conos y operador de pista. Lo montamos en el parqueo, salón o área verde de tu empresa.\n\nEmitimos factura.\n📲 Cotiza tu family day: 4239-8238\n\n#FamilyDayGuatemala #ConviviosDeFinDeAño #EmpresasGuatemala #GoKartsGuatemala #FunnyRideGoKarts',
+  file:'FUNNY RIDE - SEMANA 1-8 NOV / FR_carrusel_familyday_1…2.jpg',w:3},
+ {c:'R03',d:'2026-11-06',t:'7:00 p. m.',k:'reel',f:'Reel · 12.7 s',s:'ok',sl:'Listo',ti:'¿Qué color escoge tu peque?',
+  main:'¡Azul! · ¡Verde! · ¡Rosa! · ¡Naranja! · ¡Rojo!',m:{v:['reel3']},
+  cap:'Azul, verde, rosa, naranja o rojo: ¿cuál escogería tu peque? 🏎️ Cuéntanos en los comentarios 👇\nKarts de pedal para niños de 3 a 8 años.\n📲 4239-8238\n#GoKartsGuatemala #CumpleañosGuatemala #FunnyRideGoKarts',
+  file:'FUNNY RIDE - REELS / FR_REEL3_ELIGE_TU_COLOR.mp4',note:'Tomas del cumple Spiderman. Música: Gummy Symphony (stock Magnific).',w:3},
+,
+ {c:'H09',d:'2026-11-06',t:'Durante el día',k:'hist',f:'Historias · quiz',s:'ok',sl:'Listo',ti:'¿Tienen motor nuestros karts?',main:'¿Nuestros go karts tienen motor?',m:{v:['h09']},cap:'Quiz: Sí, son eléctricos / No, ¡son de pedal! ✅ / Funcionan con batería\nCierre: ¡Diversión a puro pedal!',capL:'Stickers',file:'FUNNY RIDE - SEMANA 1-8 NOV / FR_H09_quiz_motor.mp4',w:3},
+ {c:'P07',d:'2026-11-07',t:'12:30 p. m.',k:'carr',f:'Carrusel · 4 láminas',s:'ok',sl:'Listo',ti:'¡La pista llega donde celebras!',main:'¡La pista llega donde celebras! · Patio · Cancha · Parqueo · Salón',m:{i:['p07_1','p07_2','p07_3','p07_4']},cap:'¿Patio, cancha, parqueo o salón? 🏁\nRevisamos contigo el espacio disponible para ver cómo montar nuestro circuito.\nMándanos una foto del lugar por WhatsApp al 4239-8238. 📲\n#FunnyRide #PistaDeGoKarts #FiestasInfantiles #Guatemala',note:'Parque, cancha sintética y cancha techada: fotos reales de los tres eventos.',file:'FUNNY RIDE - SEMANA 1-8 NOV / FR_P07_carrusel_espacios_1…4.jpg',w:3},
+ {c:'R09',d:'2026-11-09',t:'7:00 p. m.',k:'reel',f:'Reel · 15.3 s',s:'ok',sl:'Listo',ti:'¡Se corre el Gran Premio!',main:'¡Se corre el Gran Premio!',m:{v:['r09']},cap:'Un parque, pequeños pilotos y muchas ganas de llegar a la meta. 🏆\nLlevamos los go karts y armamos el circuito donde el espacio lo permita.\n¿Organizamos tu Gran Premio? WhatsApp 4239-8238. 🏁\n#FunnyRide #GranPremioInfantil #EventosInfantiles #Guatemala',note:'Evento del parque de febrero. Música: Zoom Zoom (stock Magnific).',file:'FUNNY RIDE - REELS / FR_REEL9_SE_CORRE_EL_GRAN_PREMIO.mp4',w:4},
+ {c:'P08',d:'2026-11-11',t:'12:30 p. m.',k:'post',f:'Post · 3:4',s:'ok',sl:'Listo',ti:'¡Tu colegio también corre!',main:'¡Tu colegio también corre!',m:{i:['p08']},cap:'Imagina a tus pequeños estudiantes viviendo su propio Gran Premio. 🏆\nLlevamos 18 go karts de pedal, montamos el circuito y dirigimos las carreras. ¡Emitimos factura!\nOrganiza tu actividad escolar por WhatsApp al 4239-8238.\n#FunnyRide #EventosEscolares #ColegiosGuatemala #DiversionInfantil',note:'Foto del MAO sin nombrar al colegio.',file:'FUNNY RIDE - SEMANA 9-22 NOV / FR_P08_post_tu_colegio_corre.jpg',w:4},
+ {c:'H10',d:'2026-11-12',t:'Durante el día',k:'hist',f:'Historias · quiz',s:'ok',sl:'Listo',ti:'¿Desde qué edad se puede ser piloto?',main:'¿Desde qué edad puedes ser piloto?',m:{v:['h10']},cap:'Quiz: Desde los 2 / Desde los 3 ✅ / Desde los 6\nCierre: Para niños de 3 a 8 años, hasta 30 kg. ¡Consulta tu fecha!',capL:'Stickers',file:'FUNNY RIDE - SEMANA 9-22 NOV / FR_H10_quiz_edades.mp4',w:4},
+ {c:'R10',d:'2026-11-13',t:'7:00 p. m.',k:'reel',f:'Reel · 18.9 s',s:'ok',sl:'Listo',ti:'Un family day en movimiento',main:'Un family day en movimiento',m:{v:['r10']},cap:'En tu próximo family day, los pequeños también pueden ser protagonistas. 🏎️\nLlevamos 18 go karts de pedal, circuito y operador. ¡Montaje y desmontaje incluidos!\nOrganiza tu actividad con nosotros. WhatsApp 4239-8238.\n#FunnyRide #FamilyDay #EventosCorporativos #Guatemala',note:'Para pauta B2B de fin de año. Música: Clappy Trails (stock Magnific).',file:'FUNNY RIDE - REELS / FR_REEL10_FAMILY_DAY.mp4',w:4},
+ {c:'R11',d:'2026-11-16',t:'7:00 p. m.',k:'reel',f:'Reel · 25.6 s',s:'ok',sl:'Listo',ti:'2026, un año de mini carreras',main:'2026, un año de mini carreras',m:{v:['r11']},cap:'Un año de pequeñas carreras y enormes sonrisas. 🥹🏁\nGracias a las familias que hicieron de Funny Ride parte de sus momentos especiales.\n¿Tu celebración será la próxima? Escríbenos al WhatsApp 4239-8238.\n#FunnyRide #Recuerdos2026 #MiniPilotos #Guatemala',note:'Febrero, mayo y octubre. Música: Berry Happy Beat (stock Magnific).',file:'FUNNY RIDE - REELS / FR_REEL11_2026_UN_ANO_DE_CARRERAS.mp4',w:4},
+ {c:'P09',d:'2026-11-18',t:'12:30 p. m.',k:'carr',f:'Carrusel · 3 láminas',s:'ok',sl:'Listo',ti:'¡Apartar tu fecha es fácil!',main:'¡Apartar tu fecha es fácil! · 1 Escríbenos · 2 Confirmamos · 3 Apartas',m:{i:['p09_1','p09_2','p09_3']},cap:'1️⃣ Escríbenos con la fecha y el lugar de tu evento.\n2️⃣ Confirmamos disponibilidad. 3️⃣ Apartas con el 50 % de anticipo.\n¡Tu Gran Premio empieza aquí! WhatsApp 4239-8238. 🏁\n#FunnyRide #ApartaTuFecha #FiestasInfantiles #Guatemala',file:'FUNNY RIDE - SEMANA 9-22 NOV / FR_P09_carrusel_3_pasos_1…3.jpg',w:4},
+ {c:'H11',d:'2026-11-19',t:'Durante el día',k:'hist',f:'Historias · encuesta',s:'ok',sl:'Listo',ti:'¿Qué estamos celebrando?',main:'¿Qué estamos celebrando?',m:{v:['h11']},cap:'Encuesta: ¡Un cumpleaños! 🎂 / ¡Actividad del cole! 🎒\nCierre: Cuéntanos tu fecha al 4239-8238.',capL:'Stickers',file:'FUNNY RIDE - SEMANA 9-22 NOV / FR_H11_que_celebramos.mp4',w:4},
+ {c:'P10',d:'2026-11-21',t:'12:30 p. m.',k:'post',f:'Post · 3:4',s:'ok',sl:'Listo',ti:'Regálale su propio Gran Premio',main:'Regálale su propio Gran Premio',m:{i:['p10']},cap:'Hay regalos que se abren y otros que se viven. 🎁🏁\nSorpréndele en Navidad o en su cumpleaños con una carrera de go karts junto a sus amiguitos.\nHaz realidad su Gran Premio. Escríbenos al WhatsApp 4239-8238.\n#FunnyRide #RegalaExperiencias #GranPremioInfantil #Guatemala',file:'FUNNY RIDE - SEMANA 9-22 NOV / FR_P10_post_regalale_gran_premio.jpg',w:4},
+ {c:'R12',d:'2026-11-23',t:'7:00 p. m.',k:'reel',f:'Reel · 16.3 s',s:'ok',sl:'Listo',ti:'¡Esta Navidad también se corre!',main:'¡Esta Navidad también se corre!',m:{v:['r12']},cap:'Las posadas también pueden tener su propio Gran Premio. 🎄🏁\nLlevamos la pista a tu celebración para que los peques disfruten una Navidad diferente.\nConsulta fechas por WhatsApp al 4239-8238. 🎅\n#FunnyRide #PosadasNavideñas #Navidad2026 #Guatemala',note:'Tomas reales con luces navideñas y nieve de confeti. Música: Cartoon Times (stock Magnific).',file:'FUNNY RIDE - REELS / FR_REEL12_ESTA_NAVIDAD_SE_CORRE.mp4',w:5},
+ {c:'H12',d:'2026-11-24',t:'Durante el día',k:'hist',f:'Historias · cuenta regresiva',s:'ok',sl:'Listo',ti:'¿Planes para diciembre o enero?',main:'¿Ya tienes planes para diciembre o enero?',m:{v:['h12']},cap:'Sticker de cuenta regresiva "Viernes Negro · 27 de noviembre".\nCierre: ¡Activa el recordatorio y consulta fechas!',capL:'Stickers',note:'Agrega el sticker de cuenta regresiva "Viernes Negro · 27 nov".',file:'FUNNY RIDE - SEMANA 23-30 NOV / FR_H12_viernes_negro.mp4',w:5},
+ {c:'P11',d:'2026-11-27',t:'9:00 a. m.',k:'post',f:'Post · 3:4',s:'ok',sl:'Listo',ti:'Viernes Negro: aparta tu fecha',main:'Viernes Negro: aparta tu fecha',m:{i:['p11']},cap:'¿Ya estás pensando en las celebraciones de diciembre o enero? 🏁\nAprovecha este Viernes Negro para organizar con tiempo el próximo Gran Premio de tus peques.\nConsulta disponibilidad por WhatsApp al 4239-8238. 📲\n#FunnyRide #ViernesNegro #EventosInfantiles #Guatemala',note:'No promete descuento. Si defines una promoción, la agrego al arte.',file:'FUNNY RIDE - SEMANA 23-30 NOV / FR_P11_post_viernes_negro.jpg',w:5},
+ {c:'P12',d:'2026-11-29',t:'12:30 p. m.',k:'post',f:'Post · Peter y Patrick',s:'ok',sl:'Listo',ti:'¡Feliz Navidad de Peter y Patrick!',main:'¡Feliz Navidad de Peter y Patrick!',m:{i:['p12']},cap:'Peter y Patrick te mandan un abrazo navideño lleno de sonrisas. 🎄❤️\nQue esta Navidad no falten los juegos, las risas y los momentos en familia.\n¿Planeas una celebración? Escríbenos al WhatsApp 4239-8238.\n#FunnyRide #PeterYPatrick #FelizNavidad #Guatemala',note:'Nueva ilustración más limpia (fondo liso, pocos elementos) hecha en tu Gemini personal con los originales de Peter y Patrick.',file:'FUNNY RIDE - SEMANA 23-30 NOV / FR_P12_post_feliz_navidad_peter_patrick.jpg',w:5},
+ {c:'H13',d:'2026-11-30',t:'Durante el día',k:'hist',f:'Historias · cuenta regresiva',s:'ok',sl:'Listo',ti:'¡Hola, diciembre!',main:'¡Se acercan las celebraciones navideñas!',m:{v:['h13']},cap:'Sticker de cuenta regresiva "¡Hola, diciembre! · 1 de diciembre".\nCierre: Tu posada también puede tener su Gran Premio. WhatsApp 4239-8238.',capL:'Stickers',note:'Agrega el sticker de cuenta regresiva "1 de diciembre".',file:'FUNNY RIDE - SEMANA 23-30 NOV / FR_H13_hola_diciembre.mp4',w:5},
+ {c:'H14',d:'2026-12-01',t:'Durante el día',k:'hist',f:'Historia · encuesta',s:'ok',sl:'Listo',ti:'¿Listos para diciembre?',main:'¡Hola, diciembre! · Llegó la temporada de diversión',m:{v:['h14']},cap:'Encuesta: ¿Listos para diciembre? 🎄 ¡Súper listos! / 🏎️ ¡A pedalear!',capL:'Stickers',file:'FUNNY RIDE - DICIEMBRE / FR_H14_listos_diciembre.mp4',w:6},
+ {c:'P13',d:'2026-12-02',t:'12:30 p. m.',k:'carr',f:'Carrusel · 4 láminas 3:4',s:'ok',sl:'Listo',ti:'¡Una posada que recordarán!',main:'¡Una posada que recordarán! · ¡Que comiencen las carreras! · ¡Diversión para compartir! · ¡La pista llega a ustedes!',m:{i:['p13_1','p13_2','p13_3','p13_4']},cap:'¿Organizando una posada para los peques? 🎄\nCon nuestros 18 go karts de pedal, ¡la diversión toma la pista!\nEscríbenos al WhatsApp 4239-8238.\n#FunnyRide #Guatemala #PosadasInfantiles #GoKarts',file:'FUNNY RIDE - DICIEMBRE / FR_P13_carrusel_posada_1…4.jpg',w:6},
+ {c:'R13',d:'2026-12-04',t:'7:00 p. m.',k:'reel',f:'Reel · 15.3 s',s:'ok',sl:'Listo',ti:'¡Diciembre se está llenando!',main:'¡Diciembre se está llenando! · No te quedes sin tu carrera',m:{v:['r13']},cap:'Las fiestas de diciembre ya están en marcha. 🏎️\n¡Quedan pocas fechas para llevar Funny Ride a tu evento!\nConsulta disponibilidad al WhatsApp 4239-8238.\n#FunnyRide #Guatemala #EventosInfantiles #Diciembre2026',note:'Música: Happy Ukulele Kids (Pixabay).',file:'FUNNY RIDE - REELS / FR_REEL13_DICIEMBRE_SE_LLENA.mp4',w:6},
+ {c:'P14',d:'2026-12-06',t:'12:30 p. m.',k:'post',f:'Post · 3:4',s:'ok',sl:'Listo',ti:'¡Vacaciones con diversión extra!',main:'¡Vacaciones con diversión extra! · Un cumpleaños lleno de carreras',m:{i:['p14']},cap:'¿Tu peque cumple años en vacaciones? 🎂\nSorpréndelo con una pista y go karts de pedal para sus amigos.\n¡Nosotros llevamos la diversión! WhatsApp 4239-8238.\n#FunnyRide #Guatemala #CumpleanosInfantiles #VacacionesDivertidas',file:'FUNNY RIDE - DICIEMBRE / FR_P14_post_cumple_en_vacaciones.jpg',w:6},
+ {c:'H15',d:'2026-12-08',t:'Durante el día',k:'hist',f:'Historia · quiz',s:'ok',sl:'Listo',ti:'¿Cuántos karts llevamos?',main:'¿Cuántos karts llevamos? · ¡Peter y Patrick te retan!',m:{v:['h15']},cap:'Quiz: ¿Cuántos go karts llevamos a tu evento? 8 / 18 ✅ / 30\nCierre: ¡18 karts de pedal! WhatsApp 4239-8238',capL:'Stickers',note:'Cambié el quiz que propuso ChatGPT (motor) porque ya sale en H09.',file:'FUNNY RIDE - DICIEMBRE / FR_H15_quiz_cuantos_karts.mp4',w:6},
+ {c:'R14',d:'2026-12-09',t:'7:00 p. m.',k:'reel',f:'Reel · 17.8 s',s:'ok',sl:'Listo',ti:'¡Posadas sobre ruedas!',main:'¡Posadas sobre ruedas! · La magia navideña también se pedalea',m:{v:['r14']},cap:'Luces navideñas, carreras y muchas sonrisas. 🎅\nAsí se vive una posada llena de emoción con Funny Ride.\n¡Lleva esta experiencia a tu celebración! WhatsApp 4239-8238.\n#FunnyRide #Guatemala #PosadasNavidenas #GoKartsDePedal',note:'Música: Happy Ukulele Clappy (Pixabay).',file:'FUNNY RIDE - REELS / FR_REEL14_POSADAS_SOBRE_RUEDAS.mp4',w:6},
+ {c:'P15',d:'2026-12-11',t:'12:30 p. m.',k:'post',f:'Post · 3:4',s:'ok',sl:'Listo',ti:'¡Una posada diferente!',main:'¡Una posada diferente! · Para colegios y familias de colaboradores',m:{i:['p15']},cap:'Celebren juntos con una actividad llena de movimiento. 🏎️\nLlevamos los karts, armamos el circuito y dirigimos las carreras.\n¡Cotiza tu evento al WhatsApp 4239-8238!\n#FunnyRide #Guatemala #PosadasEscolares #EventosCorporativos',file:'FUNNY RIDE - DICIEMBRE / FR_P15_post_posada_colegio_empresa.jpg',w:6},
+ {c:'R15',d:'2026-12-13',t:'10:00 a. m.',k:'reel',f:'Reel · 16.7 s',s:'ok',sl:'Listo',ti:'¿Quién llegará primero?',main:'¿Quién llegará primero? · 3, 2, 1 ¡A pedalear!',m:{v:['r15']},cap:'Tres, dos, uno… ¡a pedalear! 🏎️\nLa emoción crece mientras nuestros pilotos buscan la meta.\n¿A quién retaría tu peque? ¡Etiquétalo! 🏁\n#FunnyRide #Guatemala #RetoFunnyRide #PequenosPilotos',note:'Música: Zoom Zoom (stock Magnific), otra sección que la de R09.',file:'FUNNY RIDE - REELS / FR_REEL15_QUIEN_LLEGA_PRIMERO.mp4',w:7},
+ {c:'P16',d:'2026-12-16',t:'12:30 p. m.',k:'post',f:'Post · 3:4',s:'ok',sl:'Listo',ti:'¡Gracias por tantas sonrisas!',main:'¡Gracias por tantas sonrisas! · Un año lleno de aventuras compartidas',m:{i:['p16']},cap:'Cada carrera, cumpleaños y celebración nos dejó recuerdos especiales.\nGracias a las familias que hicieron de Funny Ride parte de su 2026.\n¡Seguiremos pedaleando juntos hacia nuevas aventuras! 🏎️\n#FunnyRide #Guatemala #Gracias2026 #MomentosEnFamilia',file:'FUNNY RIDE - DICIEMBRE / FR_P16_post_gracias_2026.jpg',w:7},
+ {c:'H16',d:'2026-12-18',t:'Durante el día',k:'hist',f:'Historia · encuesta',s:'ok',sl:'Listo',ti:'¿Dónde será tu posada?',main:'¿Dónde será tu posada?',m:{v:['h16']},cap:'Encuesta: ¿Dónde será tu posada? 🏡 En casa / 🎒 En el cole o la empresa\nCierre: ¡Llevamos la pista! WhatsApp 4239-8238',capL:'Stickers',note:'Cambié la encuesta de ChatGPT (lugar de la pista) porque ya sale en H08.',file:'FUNNY RIDE - DICIEMBRE / FR_H16_donde_tu_posada.mp4',w:7},
+ {c:'R16',d:'2026-12-20',t:'10:00 a. m.',k:'reel',f:'Reel · Peter y Patrick · 14.3 s',s:'ok',sl:'Listo',ti:'¡Feliz Navidad, pilotos!',main:'¡Feliz Navidad, pilotos! · Con cariño, Peter y Patrick',m:{v:['r16']},cap:'Peter y Patrick vienen con un saludo muy especial. 🎄\nQue esta Navidad esté llena de juegos, abrazos y sonrisas.\n¡Felices fiestas de parte de Funny Ride! ❤️\n#FunnyRide #Guatemala #FelizNavidad #PeterYPatrick',note:'Nueva ilustración navideña limpia (tu Gemini personal) con zoom suave, y cierre con tomas reales. Música: Cartoon Times.',file:'FUNNY RIDE - REELS / FR_REEL16_FELIZ_NAVIDAD_PETER_PATRICK.mp4',w:7},
+ {c:'P17',d:'2026-12-24',t:'9:00 a. m.',k:'post',f:'Post · Peter y Patrick',s:'ok',sl:'Listo',ti:'¡Feliz Nochebuena!',main:'¡Feliz Nochebuena! · Los mejores regalos son los momentos',m:{i:['p17']},cap:'Esta noche, la alegría se comparte en familia. ✨\nQue nunca falten las risas, la ilusión y los abrazos.\n¡Feliz Nochebuena les desea Funny Ride! 🎄\n#FunnyRide #Guatemala #Nochebuena #NavidadEnFamilia',note:'Nueva ilustración de Nochebuena, limpia y minimalista (tu Gemini personal).',file:'FUNNY RIDE - DICIEMBRE / FR_P17_post_nochebuena.jpg',w:7},
+ {c:'H17',d:'2026-12-26',t:'Durante el día',k:'hist',f:'Historia · encuesta',s:'ok',sl:'Listo',ti:'¡Enero viene con carreras!',main:'¡Enero viene con carreras! · Aparta tu fecha 2027',m:{v:['h17']},cap:'Encuesta: ¿Qué celebrarías en enero? 🎂 Un cumpleaños / 🎒 Regreso a clases\nCierre: WhatsApp 4239-8238',capL:'Stickers',file:'FUNNY RIDE - DICIEMBRE / FR_H17_enero.mp4',w:7},
+ {c:'R17',d:'2026-12-28',t:'7:00 p. m.',k:'reel',f:'Reel · 18.7 s',s:'ok',sl:'Listo',ti:'¡Arranca enero con diversión!',main:'¡Arranca enero con diversión! · Cumpleaños y regreso a clases',m:{v:['r17']},cap:'Nuevo año, nuevas aventuras para los pequeños pilotos. 🏁\nCelebra cumpleaños o actividades de regreso a clases con Funny Ride.\nAparta con el 50 % de anticipo. WhatsApp 4239-8238.\n#FunnyRide #Guatemala #CumpleanosInfantiles #RegresoAClases',note:'Música: Playtime (Pixabay), otra sección que la de R08.',file:'FUNNY RIDE - REELS / FR_REEL17_ARRANCA_ENERO.mp4',w:7},
+ {c:'P18',d:'2026-12-31',t:'12:30 p. m.',k:'post',f:'Post · Peter y Patrick',s:'ok',sl:'Listo',ti:'¡Vamos por un 2027 increíble!',main:'¡Vamos por un 2027 increíble! · ¡Feliz Año Nuevo!',m:{i:['p18']},cap:'¡Terminamos el año con el corazón lleno de gratitud! ❤️\nGracias por acompañar a Peter y Patrick en cada aventura.\n¡Feliz Año Nuevo de parte de toda la familia Funny Ride! 🏎️\n#FunnyRide #Guatemala #FelizAnoNuevo #Bienvenido2027',note:'Nueva ilustración de Año Nuevo, limpia y minimalista (tu Gemini personal).',file:'FUNNY RIDE - DICIEMBRE / FR_P18_post_feliz_ano_nuevo.jpg',w:7},
+];
+const G=[{"c": "M01", "d": "2026-10-26", "t": "12:30 p. m.", "f": "Carrusel · 6 láminas", "s": "ok", "sl": "Listo", "ti": "Tipos de mamá en una fiesta infantil", "main": "La del tupper · La que graba todo · La del cafecito · La del «ya nos vamos» · La organizadora", "cap": "Todas hemos sido una de estas 😂 (o las cinco en la misma fiesta).\n¿Cuál eres tú?\n\nPD: en las fiestas Funny Ride, la organizadora sí se puede sentar 🏁\n\n#FiestaInfantil #MamásGuatemaltecas #Guate", "m": {"i": ["m01_1", "m01_2", "m01_3", "m01_4", "m01_5", "m01_6"]}, "note": "Mamás diversas: rubia, morena, de pelo negro."}, {"c": "M02", "d": "2026-10-27", "t": "8:30 p. m.", "f": "Meme · 1 imagen", "s": "ok", "sl": "Listo", "ti": "La seño…", "main": "El primer día de clases · La semana de la clausura", "cap": "Enero vs. semana de clausura ☕😮‍💨\nUn aplauso para todas las seños que llegaron vivas al final del ciclo. Seños: ¿qué fue lo que más les costó este año?\n\n#Seños #Clausura2026 #Guatemala", "m": {"i": ["m02"]}, "note": "Pieza de colegio: va en la semana de clausuras."}, {"c": "M03", "d": "2026-10-28", "t": "12:30 p. m.", "f": "Carrusel guardable · 6 láminas", "s": "ok", "sl": "Listo", "ti": "8 frases para la tarjeta de la seño", "main": "8 frases para la tarjeta de la seño · Guárdalo para la clausura", "cap": "Guárdalo para la clausura 📌\n8 frases cortitas para que tu peque le escriba a su seño (la 8 es de parte de mamá 😅).\n¿Cuál le vas a poner?\n\n#Clausura2026 #Seños #MamásGuatemaltecas", "m": {"i": ["m03_1", "m03_2", "m03_3", "m03_4", "m03_5", "m03_6"]}}, {"c": "M04", "d": "2026-10-29", "t": "8:30 p. m.", "f": "Meme · 1 imagen", "s": "ok", "sl": "Listo", "ti": "El disfraz a las 9 p. m.", "main": "9:00 p. m. · «Mami, mañana tengo que llevar disfraz»", "cap": "\"Mami, mañana tengo que llevar disfraz… es que no te di la circular\" 🫠\nCuéntanos el disfraz más improvisado que te ha tocado armar (los de bolsa negra y cartón cuentan 😂).\n\n#MamásGuatemaltecas #FiestaInfantil #Clausura2026", "m": {"i": ["m04"]}}, {"c": "M05", "d": "2026-10-30", "t": "8:30 p. m.", "f": "Reel · 6.5 s · video real", "s": "ok", "sl": "Listo", "ti": "Mi peque en el kart / cuando le digo que ya nos vamos", "main": "Mi peque en el kart: · Mi peque cuando le digo que ya nos vamos:", "cap": "Cinco minutos más, mamá 😭🏎️\n¿El tuyo también hace este drama cuando ya nos vamos?\n\n#FiestaInfantil #MamásGuatemaltecas #GoKarts", "m": {"v": ["m05"]}, "note": "Clips reales con permiso firmado de los papás. Trae el audio del video original."}, {"c": "M06", "d": "2026-10-31", "t": "8:30 p. m.", "f": "Meme · 1 imagen", "s": "ok", "sl": "Listo", "ti": "Fiambre", "main": "Yo: 3 días haciendo fiambre. · Mi peque:", "cap": "Hoy se pica verdura en todas las casas chapinas 🥬🥕\nY el peque, como siempre, va directo al elote y la salchicha.\n¿En tu casa quién hace el fiambre?\n\n#Fiambre #TodosLosSantos #Guatemala", "m": {"i": ["m06"]}}, {"c": "M07", "d": "2026-11-01", "t": "8:30 p. m.", "f": "Meme · 1 imagen", "s": "ok", "sl": "Listo", "ti": "Barriletes", "main": "Mi peque viendo los barriletes: · —Papi, quiero uno así.", "cap": "Feliz Día de Todos los Santos 🪁\nCada año la misma petición después de ver los barriletes gigantes.\n¿Ya fueron a Sumpango o a Santiago este año?\n\n#Barriletes #TodosLosSantos #Guatemala", "m": {"i": ["m07"]}}, {"c": "M08", "d": "2026-11-02", "t": "8:30 p. m.", "f": "Reel · 9.8 s", "s": "warn", "sl": "En ajuste", "ti": "Tendencia del cafecito, versión Funny Ride", "main": "Un volantito, firmecito · Una vueltita, rapidito · Una carrerita, juntitos · Un abracito, apretadito · Un cumpleañitos, con karts", "cap": "Las pequeñas alegrías de la vida… versión pilotos 🏁\n¿Cuál es la de tu peque?\n\n#FiestaInfantil #GoKarts #MamásGuatemaltecas", "note": "Se están cambiando los karts de la ilustración por karts idénticos a los reales; el video se actualiza aquí al terminar. El audio «Bonito, Bonito» se pone en la app."}, {"c": "M09", "d": "2026-11-03", "t": "12:30 p. m.", "f": "Carrusel guardable · 4 láminas", "s": "ok", "sl": "Listo", "ti": "6 juegos para el cumple de tu peque", "main": "6 juegos para el cumple de tu peque · Sin pantallas, guárdalo", "cap": "Guárdalo para el próximo cumple 📌\n6 juegos que nunca fallan y no necesitan pantallas.\n¿Cuál era tu favorito de niña?\n\n#FiestaInfantil #IdeasParaCumpleaños #Guatemala", "m": {"i": ["m09_1", "m09_2", "m09_3", "m09_4"]}}, {"c": "M10", "d": "2026-11-04", "t": "8:30 p. m.", "f": "Meme · 1 imagen", "s": "ok", "sl": "Listo", "ti": "Graduación de prepa", "main": "Mi peque se gradúa de prepa. · Yo:", "cap": "Nadie llora más que mamá en la graduación de prepa 🎓😭\n¿Cuándo es la de tu peque?\n\n#GraduaciónDePrepa #MamásGuatemaltecas #Kínder", "m": {"i": ["m10"]}}, {"c": "M11", "d": "2026-11-05", "t": "8:30 p. m.", "f": "Reel · 12 s · voz de niña", "s": "warn", "sl": "En ajuste", "ti": "Mami… ¿me viste?", "main": "Mami… · ¿me viste? · ¡Ya sé manejar solita! · ¿Otra vueltita? · Su primera vuelta nunca se olvida", "cap": "Su primera vuelta nunca se olvida 🩷\n¿Te acuerdas de la primera vez que tu peque hizo algo solito?\n\n#MamásGuatemaltecas #Peques #GoKarts", "note": "Se están cambiando los karts de la ilustración por karts idénticos a los reales; el video se actualiza aquí al terminar."}, {"c": "M12", "d": "2026-11-06", "t": "8:30 p. m.", "f": "Meme · 1 imagen", "s": "todo", "sl": "En producción", "ti": "Mamá vs papá en la pista", "main": "Mamá: ¡Con cuidado! · Papá: ¡Más rápido!", "cap": "En toda casa hay uno de cada uno 😂🏁\n¿Quién es quién en la tuya?\n\n#Peques #GoKarts #MamásGuatemaltecas", "note": "Nueva: reemplaza al carrusel de convivio para seños (el 6 nov ya cierran clases)."}, {"c": "M13", "d": "2026-11-07", "t": "8:30 p. m.", "f": "Meme · 2 láminas", "s": "ok", "sl": "Listo", "ti": "Vacaciones a las 6 a. m.", "main": "Mi peque en vacaciones a las 6 a. m.: · El mismo peque cuando hay que salir temprano:", "cap": "¿Por qué en vacaciones se despiertan solitos a las 6? 🥲\n¿Al tuyo también le pasa?\n\n#MamásGuatemaltecas #Peques #VacacionesGuate", "m": {"i": ["m13_1", "m13_2"]}}, {"c": "M14", "d": "2026-11-08", "t": "8:30 p. m.", "f": "Meme · 1 imagen", "s": "warn", "sl": "En ajuste", "ti": "Última vuelta", "main": "Yo: «Última vuelta». · Mi peque:", "cap": "Siempre es «la última»… hasta que pide otra 😅\n¿Cuántas «últimas vueltas» da tu peque?\n\n#FiestaInfantil #Peques #GoKarts", "note": "Se están cambiando los karts de la ilustración por karts idénticos a los reales; el video se actualiza aquí al terminar."}, {"c": "M15", "d": "2026-11-09", "t": "8:30 p. m.", "f": "Meme · 1 imagen", "s": "todo", "sl": "En producción", "ti": "Papá solo vino a acompañar", "main": "Papá: solo vine a acompañar. · También papá:", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M16", "d": "2026-11-10", "t": "12:30 p. m.", "f": "Carrusel guardable", "s": "todo", "sl": "Por hacer", "ti": "12 planes para las vacaciones sin salir de casa", "main": "12 planes para las vacaciones con tus peques sin salir de casa", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M17", "d": "2026-11-11", "t": "8:30 p. m.", "f": "Meme", "s": "todo", "sl": "Por hacer", "ti": "Primer día de vacaciones", "main": "Yo: hoy descansamos. · Mi peque a las 8:05: ¿y ahora qué hacemos?", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M18", "d": "2026-11-12", "t": "8:30 p. m.", "f": "Antes y después", "s": "todo", "sl": "Por hacer", "ti": "Dibujo a kart", "main": "Las mamás mandan el dibujo de su peque y lo devolvemos convertido en kart 3D", "cap": "Se escribe cuando se produzca la pieza.", "note": "Se lanza con el dibujo de un peque de la familia, con permiso."}, {"c": "M19", "d": "2026-11-13", "t": "12:30 p. m.", "f": "Carrusel · 6 láminas", "s": "todo", "sl": "En producción", "ti": "Tipos de papá en una fiesta infantil", "main": "El del asador · El que se sube a todo · El que graba con la tablet · El de la hielera · El del «¿ya nos vamos?»", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M20", "d": "2026-11-14", "t": "8:30 p. m.", "f": "Meme · 1 imagen", "s": "ok", "sl": "Listo", "ti": "Lo que más digo en vacaciones", "main": "Lo que más digo en vacaciones: ¿Ya comió? · ¡Bájese de ahí! · Pregúntele a su papá", "cap": "Y apenas va la primera semana de vacaciones 😅\n¿Cuál es la cuarta?\n\n#VacacionesGuate #MamásGuatemaltecas #FiestaInfantil", "m": {"i": ["m20"]}}, {"c": "M21", "d": "2026-11-15", "t": "8:30 p. m.", "f": "Meme · 1 imagen", "s": "todo", "sl": "En producción", "ti": "Papá viendo la pista", "main": "Papá viendo la pista de karts:", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M22", "d": "2026-11-16", "t": "8:30 p. m.", "f": "Reel · Peter y Patrick", "s": "todo", "sl": "Por hacer", "ti": "Podcast de Peter, ep. 1", "main": "¿Por qué los adultos dicen «ahorita» y nunca es ahorita?", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M23", "d": "2026-11-17", "t": "12:30 p. m.", "f": "Carrusel guardable", "s": "todo", "sl": "Por hacer", "ti": "Lo que siempre se olvida llevar a una fiesta", "main": "Lo que mamá y papá siempre olvidan llevar a una fiesta (checklist)", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M24", "d": "2026-11-18", "t": "8:30 p. m.", "f": "Meme", "s": "todo", "sl": "Por hacer", "ti": "Expectativa vs realidad", "main": "Expectativa: cumple de Pinterest. · Realidad:", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M25", "d": "2026-11-19", "t": "8:30 p. m.", "f": "Reel · clips reales", "s": "todo", "sl": "Por hacer", "ti": "POV de la mamá organizadora", "main": "POV: organizaste todo, por fin te sientas… y te piden agua", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M26", "d": "2026-11-20", "t": "12:30 p. m.", "f": "Imán por DM", "s": "todo", "sl": "Por hacer", "ti": "POSADAS: 9 actividades para las 9 noches", "main": "Escribe POSADAS y te mandamos 9 actividades con peques para las posadas", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M27", "d": "2026-11-21", "t": "8:30 p. m.", "f": "Meme", "s": "todo", "sl": "Por hacer", "ti": "El grupo de WhatsApp de papás en vacaciones", "main": "El grupo de WhatsApp de papás… en vacaciones", "cap": "Se escribe cuando se produzca la pieza.", "note": "Guiño de colegio (ligero)."}, {"c": "M28", "d": "2026-11-22", "t": "8:30 p. m.", "f": "Formato ganador", "s": "todo", "sl": "Se decide el 22", "ti": "Ganador de la prueba", "main": "El formato que más envíos tenga en la prueba 26 oct – 22 nov", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M29", "d": "2026-11-23", "t": "8:30 p. m.", "f": "Formato ganador", "s": "todo", "sl": "Por definir", "ti": "Formato ganador", "main": "Repetición del formato ganador", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M30", "d": "2026-11-24", "t": "12:30 p. m.", "f": "Carrusel guardable", "s": "todo", "sl": "Por hacer", "ti": "El árbol con peques", "main": "Cómo armar el árbol con peques (y que siga en pie el 24)", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M31", "d": "2026-11-25", "t": "8:30 p. m.", "f": "Meme", "s": "todo", "sl": "Por hacer", "ti": "Viernes Negro con papá", "main": "Viernes Negro. Papá: solo vamos a ver. · También papá:", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M32", "d": "2026-11-26", "t": "8:30 p. m.", "f": "Reel · voz de niño", "s": "todo", "sl": "Por hacer", "ti": "Papi… ¿jugamos una carrera?", "main": "Reel tierno con voz de niño: «Papi… ¿jugamos una carrera?»", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M33", "d": "2026-11-27", "t": "8:30 p. m.", "f": "Meme", "s": "todo", "sl": "Por hacer", "ti": "La carta al Niño Dios", "main": "Mi peque escribiendo su carta al Niño Dios:", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M34", "d": "2026-11-28", "t": "8:30 p. m.", "f": "Formato ganador", "s": "todo", "sl": "Por definir", "ti": "Formato ganador", "main": "Repetición del formato ganador", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M35", "d": "2026-11-29", "t": "8:30 p. m.", "f": "Ternura · Peter y Patrick", "s": "todo", "sl": "Por hacer", "ti": "Armando el nacimiento", "main": "Peter y Patrick armando el nacimiento", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M36", "d": "2026-11-30", "t": "12:30 p. m.", "f": "Carrusel guardable", "s": "todo", "sl": "Por hacer", "ti": "Sobrevivir diciembre con peques", "main": "10 ideas para sobrevivir diciembre con peques en casa", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M37", "d": "2026-12-01", "t": "8:30 p. m.", "f": "Meme", "s": "todo", "sl": "Por hacer", "ti": "Las luces del árbol", "main": "Mamá: ya puse el árbol. · Papá: buscando cuál serie de luces sí prende", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M38", "d": "2026-12-02", "t": "8:30 p. m.", "f": "Formato ganador", "s": "todo", "sl": "Por definir", "ti": "Formato ganador", "main": "Repetición del formato ganador", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M39", "d": "2026-12-03", "t": "8:30 p. m.", "f": "Meme", "s": "todo", "sl": "Por hacer", "ti": "En casa de la abuelita", "main": "Mi peque en casa de la abuelita: 3 tamales. · En la casa: no tengo hambre", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M40", "d": "2026-12-04", "t": "8:30 p. m.", "f": "Reel · clips reales", "s": "todo", "sl": "Por hacer", "ti": "Cosas que solo entiende una mamá en una fiesta", "main": "Cosas que solo entiende una mamá en una fiesta infantil", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M41", "d": "2026-12-05", "t": "8:30 p. m.", "f": "Formato ganador", "s": "todo", "sl": "Por definir", "ti": "Formato ganador", "main": "Repetición del formato ganador", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M42", "d": "2026-12-06", "t": "8:30 p. m.", "f": "Meme", "s": "todo", "sl": "Por hacer", "ti": "La seño en vacaciones", "main": "La seño en vacaciones cuando ve a un alumno en el súper", "cap": "Se escribe cuando se produzca la pieza.", "note": "Guiño de colegio (ligero)."}, {"c": "M43", "d": "2026-12-07", "t": "12:30 p. m.", "f": "Meme", "s": "todo", "sl": "Por hacer", "ti": "Quema del Diablo", "main": "Lo que este año sí quemo: la lista de lo que juré no volver a comprar para la fiesta", "cap": "Se escribe cuando se produzca la pieza.", "note": "Sin pólvora."}, {"c": "M44", "d": "2026-12-08", "t": "8:30 p. m.", "f": "Formato ganador", "s": "todo", "sl": "Por definir", "ti": "Formato ganador", "main": "Repetición del formato ganador", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M45", "d": "2026-12-09", "t": "12:30 p. m.", "f": "Carrusel guardable", "s": "todo", "sl": "Por hacer", "ti": "Regalos que no son pantallas", "main": "Regalos que no son pantallas, por edad de 3 a 8 años", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M46", "d": "2026-12-10", "t": "8:30 p. m.", "f": "Ternura · Peter y Patrick", "s": "todo", "sl": "Por hacer", "ti": "La carta de Peter y Patrick", "main": "Peter y Patrick escriben su carta al Niño Dios", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M47", "d": "2026-12-11", "t": "8:30 p. m.", "f": "Formato ganador", "s": "todo", "sl": "Por definir", "ti": "Formato ganador", "main": "Repetición del formato ganador", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M48", "d": "2026-12-12", "t": "8:30 p. m.", "f": "Meme", "s": "todo", "sl": "Por hacer", "ti": "El convivio de la empresa de papá", "main": "Mi peque en el convivio de la empresa de papá: el primero en la fila de los regalos", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M49", "d": "2026-12-13", "t": "8:30 p. m.", "f": "Reel · voz de niña", "s": "todo", "sl": "Por hacer", "ti": "Mi primera Navidad manejando", "main": "Reel tierno con voz de niña", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M50", "d": "2026-12-15", "t": "8:30 p. m.", "f": "Meme", "s": "todo", "sl": "Por hacer", "ti": "Este diciembre no gasto", "main": "«Este diciembre no gasto» · Yo el 24 comprando el estreno", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M51", "d": "2026-12-17", "t": "8:30 p. m.", "f": "Meme", "s": "todo", "sl": "Por hacer", "ti": "Posadas", "main": "Mi peque en la posada: solo va por el chocolate y el pan", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M52", "d": "2026-12-19", "t": "8:30 p. m.", "f": "Formato ganador", "s": "todo", "sl": "Por definir", "ti": "Formato ganador", "main": "Repetición del formato ganador", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M53", "d": "2026-12-21", "t": "8:30 p. m.", "f": "Meme", "s": "todo", "sl": "Por hacer", "ti": "El regalo a las 11:58 p. m.", "main": "Papá armando el regalo el 24 a las 11:58 p. m.", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M54", "d": "2026-12-23", "t": "8:30 p. m.", "f": "Meme", "s": "todo", "sl": "Por hacer", "ti": "El tamal de las 12:01", "main": "Mi peque el 24: no quiero tamal. · A las 12:01: ¿hay tamal?", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M55", "d": "2026-12-26", "t": "8:30 p. m.", "f": "Meme", "s": "todo", "sl": "Por hacer", "ti": "26 de diciembre", "main": "26 de diciembre. La sala:", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M56", "d": "2026-12-28", "t": "12:30 p. m.", "f": "Carrusel guardable", "s": "todo", "sl": "Por hacer", "ti": "Lo que queda de vacaciones", "main": "Planes para lo que queda de vacaciones", "cap": "Se escribe cuando se produzca la pieza."}, {"c": "M57", "d": "2026-12-30", "t": "8:30 p. m.", "f": "Meme", "s": "todo", "sl": "Por hacer", "ti": "Propósitos 2027", "main": "Propósitos 2027: mamá vs mi peque", "cap": "Se escribe cuando se produzca la pieza."}];
+const wk=d=>d<='2026-10-22'?1:d<='2026-10-31'?2:d<='2026-11-08'?3:d<='2026-11-22'?4:d<='2026-11-30'?5:d<='2026-12-13'?6:7;
+G.forEach(g=>{g.k='crec';g.w=wk(g.d)});P.push(...G);
+const WEEKS={1:['s1','16–22 oct','Gran Premio del colegio. Arranca la línea gráfica.'],2:['s2','23–31 oct','Halloween, dudas de los papás y clausuras.'],3:['s3','1–8 nov','Fin de clases, vacaciones y convivios de empresa.'],4:['s4','9–22 nov','Prueba social y fechas de diciembre.'],5:['s5','23–30 nov','Aparta diciembre: Viernes Negro y Navidad.'],6:['s6','1–13 dic','Posadas y últimas fechas del año.'],7:['s7','14–31 dic','Navidad, gracias 2026 y enero.']};
+const ADS=[
+ '🏁 ¿Cumple en vacaciones? Llevamos la pista de go karts a tu casa: karts de pedal para niños de 3 a 8 años, circuito con conos y operador. Escríbenos y te mandamos la cotización.',
+ 'Tu hijo merece su propio Gran Premio. 18 karts, 50 conos y un operador llegan a tu fiesta. Las fechas de noviembre y diciembre se llenan: aparta la tuya por WhatsApp.',
+ 'Colegios y guarderías: cierren el ciclo con una carrera de go karts. Montamos la pista en su cancha y emitimos factura. Pidan su cotización por WhatsApp.'];
+const MES=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+const DIA=['dom','lun','mar','mié','jue','vie','sáb'];
+const esc=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const id=p=>'p-'+p.c.replace(/[^A-Za-z0-9]/g,'');
+const done=p=>p.s==='ok'||p.s==='warn';
+const LS={get(k){try{return localStorage.getItem(k)||''}catch(e){return ''}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+
+const cnt=k=>P.filter(p=>p.k===k).length;
+const st=document.getElementById('stats');
+[[P.filter(Boolean).length,'piezas'],[cnt('crec'),'de crecimiento'],[cnt('reel'),'reels'],[cnt('carr'),'carruseles'],[cnt('post'),'posts'],[cnt('hist'),'bloques de historias'],[P.filter(done).length,'producidas']].forEach(([n,l])=>{st.insertAdjacentHTML('beforeend',`<div class="stat"><b>${n}</b><small>${l}</small></div>`)});
+
+const today='2026-10-25';
+function month(y,m,from){
+  let h=`<div class="month"><h3>${['Octubre','Noviembre','Diciembre'][m-9]} ${y}</h3><div class="cal">`;
+  ['lun','mar','mié','jue','vie','sáb','dom'].forEach(d=>h+=`<div class="dow">${d}</div>`);
+  const first=new Date(y,m,1),days=new Date(y,m+1,0).getDate(),off=(first.getDay()+6)%7;
+  for(let i=0;i<off;i++)h+='<div class="day off"></div>';
+  for(let d=1;d<=days;d++){
+    const ds=`${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    if(d<from){h+=`<div class="day off"><span class="n">${d}</span></div>`;continue}
+    const items=P.filter(p=>p.d===ds).map(p=>`<a class="code ${p.k} ${p.k==='crec'?'is-crec':'is-com'}${done(p)?'':' pend'}" href="#${id(p)}" title="${esc(p.ti)}">${p.c}</a>`).join('');
+    h+=`<div class="day${ds===today?' today':''}"><span class="n">${d}</span>${items}</div>`;
+  }
+  return h+'</div></div>';
+}
+document.getElementById('months').innerHTML=month(2026,9,16)+month(2026,10,1)+month(2026,11,1);
+
+function media(p){
+  if(!p.m)return `<div class="ph"><b>${esc(p.main)}</b><small>${p.s==='shoot'?'Necesita material nuevo':p.s==='warn'?'Cambiando los karts por los reales':'Aún no producido'}</small></div>`;
+  const list=p.m.v||p.m.i, isV=!!p.m.v;
+  const el=n=>isV?`<video src="m3/${n}.mp4" poster="m3/${n}.jpg" controls playsinline preload="none"></video>`:`<img src="m3/${n}.jpg" alt="${esc(p.ti)}" loading="lazy">`;
+  let h=`<div class="media${isV?' v':''}" data-list="${list.join(',')}" data-v="${isV?1:0}" data-i="0">${el(list[0])}`;
+  if(list.length>1)h+=`<button class="nav p" type="button" aria-label="Anterior">‹</button><button class="nav n" type="button" aria-label="Siguiente">›</button><span class="count">1/${list.length}</span>`;
+  return h+'</div>';
+}
+function card(p){
+  const dt=new Date(p.d+'T12:00');
+  return `<article class="card ${p.k==='crec'?'is-crec':'is-com'}" id="${id(p)}">
+   <div class="c-top"><span class="code ${p.k}">${p.c}</span><span class="when">${DIA[dt.getDay()]} ${dt.getDate()} ${MES[dt.getMonth()]} · ${p.t}</span>${p.k==='crec'?'<span class="lane">Crecimiento</span>':''}<span class="chip">${esc(p.f)}</span><span class="st ${p.s}">${p.sl}</span></div>
+   ${media(p)}
+   <div class="c-body">
+    <h3>${esc(p.ti)}</h3>
+    <div><span class="lbl">Texto principal</span><div class="main">${esc(p.main)}</div></div>
+    <div><span class="lbl">${p.capL||'Caption'}</span><div class="cap"><button class="copy" type="button">Copiar</button><span class="ct">${esc(p.cap)}</span></div></div>
+    ${p.note?`<div class="note">${esc(p.note)}</div>`:''}
+    ${p.file?`<div class="file">Documents / ${esc(p.file)}</div>`:''}
+    <div><label class="lbl" for="n-${id(p)}">Tus cambios</label><textarea id="n-${id(p)}" data-code="${p.c}" placeholder="Qué cambiarías de ${p.c}"></textarea></div>
+   </div></article>`;
+}
+let W='';
+for(const w in WEEKS){const [sid,lab,desc]=WEEKS[w];
+  W+=`<section id="${sid}"><div class="week-h"><div class="sec-h" style="margin:0"><h2>Semana ${lab}</h2></div><p>${desc}</p></div><div class="cards">${P.filter(p=>p.w==w).sort((a,b)=>a.d.localeCompare(b.d)).map(card).join('')}</div></section>`;}
+document.getElementById('weeks').innerHTML=W;
+document.getElementById('adcopies').innerHTML=ADS.map((a,i)=>`<div class="box"><span class="lbl">Copy de anuncio ${i+1}</span><div class="cap"><button class="copy" type="button">Copiar</button><span class="ct">${esc(a)}</span></div></div>`).join('');
+
+function copyText(txt,btn){
+  const ok=()=>{const o='Copiar';btn.textContent='Copiado';setTimeout(()=>btn.textContent=o,1400)};
+  const fb=()=>{const r=document.createRange();r.selectNodeContents(btn.parentElement.querySelector('.ct'));const s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Seleccionado'};
+  try{navigator.clipboard.writeText(txt).then(ok,fb)}catch(e){fb()}
+}
+document.addEventListener('click',e=>{
+  const fb=e.target.closest('.filt button');if(fb){document.body.classList.remove('f-com','f-crec');if(fb.dataset.f!=='all')document.body.classList.add('f-'+fb.dataset.f);document.querySelectorAll('.filt button').forEach(x=>x.setAttribute('aria-pressed',x===fb?'true':'false'));return}
+  const b=e.target.closest('.copy');if(b){copyText(b.parentElement.querySelector('.ct').textContent,b);return}
+  const n=e.target.closest('.nav');if(n){const m=n.parentElement,list=m.dataset.list.split(','),v=m.dataset.v==='1';
+    const i=(+m.dataset.i+(n.classList.contains('n')?1:-1)+list.length)%list.length;m.dataset.i=i;
+    const old=m.querySelector('img,video'),nm=list[i];
+    if(v){old.pause();old.poster=`m3/${nm}.jpg`;old.src=`m3/${nm}.mp4`}else old.src=`m3/${nm}.jpg`;
+    m.querySelector('.count').textContent=`${i+1}/${list.length}`}
+});
+document.querySelectorAll('textarea[data-code]').forEach(t=>{t.value=LS.get('fr-n-'+t.dataset.code);t.addEventListener('input',()=>LS.set('fr-n-'+t.dataset.code,t.value))});
+document.getElementById('copyAll').addEventListener('click',()=>{
+  const lines=[...document.querySelectorAll('textarea[data-code]')].filter(t=>t.value.trim()).map(t=>`${t.dataset.code}: ${t.value.trim()}`);
+  const msg=document.getElementById('copyMsg');
+  if(!lines.length){msg.textContent='Todavía no escribiste cambios en ninguna tarjeta.';return}
+  const txt='Cambios Funny Ride:\n'+lines.join('\n');
+  try{navigator.clipboard.writeText(txt).then(()=>msg.textContent=`Copiados ${lines.length} cambios. Pégalos en el chat.`,()=>{msg.textContent=txt})}catch(err){msg.textContent=txt}
+});
+</script>
+
+</body></html>

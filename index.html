@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <link rel="icon" href="media/logo-circ.png">
 <link rel="apple-touch-icon" href="media/logo-circ.png">
-<title>Go karts para fiestas infantiles en Guatemala | Funny Ride Go Karts</title>
+<title>Go karts para niños y fiestas infantiles en Guatemala | Funny Ride</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Go karts de pedal para niños de 3 a 8 años en Guatemala. Llevamos 18 karts, el circuito con conos y un operador a tu cumpleaños, colegio, posada o family day. Cotiza por WhatsApp al 4239-8238.">
+<meta name="description" content="Go karts de pedal para niños de 3 a 8 años, a domicilio en zona 10, zona 14, zona 15, zona 16 y toda la Ciudad de Guatemala. Entretenimiento para fiestas infantiles, colegios y posadas. Cotiza por WhatsApp al 4239-8238.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://josemarroquin.me/funny-ride/">
 <meta name="theme-color" content="#FFF7E8">
@@ -54,10 +54,9 @@ document.addEventListener('DOMContentLoaded',function(){var cot=document.getElem
    "addressLocality": "Ciudad de Guatemala",
    "addressCountry": "GT"
   },
-  "areaServed": {
-   "@type": "Country",
-   "name": "Guatemala"
-  },
+  "alternateName": ["Funny Ride", "Funny Ride GT"],
+  "areaServed": [{"@type": "City", "name": "Ciudad de Guatemala"}, {"@type": "Place", "name": "Zona 1, Ciudad de Guatemala"}, {"@type": "Place", "name": "Zona 4, Ciudad de Guatemala"}, {"@type": "Place", "name": "Zona 9, Ciudad de Guatemala"}, {"@type": "Place", "name": "Zona 10, Ciudad de Guatemala"}, {"@type": "Place", "name": "Zona 11, Ciudad de Guatemala"}, {"@type": "Place", "name": "Zona 12, Ciudad de Guatemala"}, {"@type": "Place", "name": "Zona 13, Ciudad de Guatemala"}, {"@type": "Place", "name": "Zona 14, Ciudad de Guatemala"}, {"@type": "Place", "name": "Zona 15, Ciudad de Guatemala"}, {"@type": "Place", "name": "Zona 16, Ciudad de Guatemala"}, {"@type": "Place", "name": "Zona 18, Ciudad de Guatemala"}, {"@type": "Place", "name": "Mixco, Guatemala"}, {"@type": "Place", "name": "Villa Nueva, Guatemala"}, {"@type": "Place", "name": "San Miguel Petapa, Guatemala"}, {"@type": "Place", "name": "Santa Catarina Pinula, Guatemala"}, {"@type": "Place", "name": "Carretera a El Salvador, Guatemala"}, {"@type": "Place", "name": "Fraijanes, Guatemala"}, {"@type": "Place", "name": "San José Pinula, Guatemala"}],
+  "knowsAbout": ["go karts para niños", "fiestas infantiles", "entretenimiento para cumpleaños infantiles", "actividades para colegios", "posadas y family days"],
   "sameAs": [
    "https://www.instagram.com/funnygokarts_gt/",
    "https://www.facebook.com/587291097795716"
@@ -66,8 +65,9 @@ document.addEventListener('DOMContentLoaded',function(){var cot=document.getElem
    "@type": "Offer",
    "itemOffered": {
     "@type": "Service",
-    "name": "Pista de go karts de pedal para eventos infantiles",
-    "serviceType": "Alquiler de go karts para fiestas infantiles"
+    "name": "Pista de go karts de pedal para fiestas infantiles",
+    "serviceType": "Alquiler de go karts para niños a domicilio",
+    "areaServed": "Ciudad de Guatemala"
    }
   },
   "contactPoint": {
@@ -111,6 +111,22 @@ document.addEventListener('DOMContentLoaded',function(){var cot=document.getElem
     "acceptedAnswer": {
      "@type": "Answer",
      "text": "Con el 50 % de anticipo. Escríbenos por WhatsApp y te mandamos la cotización."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "¿Llegan a la zona 10 y a otras zonas?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Sí. Llevamos los go karts a domicilio en zona 10, 14, 15, 16 y toda la Ciudad de Guatemala, además de Mixco, Villa Nueva, Carretera a El Salvador y alrededores. Fuera de la ciudad cotizamos el traslado aparte."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "¿Qué incluye el servicio para fiestas infantiles?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Los go karts de pedal, el montaje del circuito con conos, un operador que dirige las carreras y organiza los turnos, el transporte y la recogida al final."
     }
    }
   ]
@@ -273,6 +289,10 @@ input:focus,select:focus{outline:none;border-color:var(--cielo)}
 .cot .btn{justify-content:center}
 @media (max-width:860px){.cot{grid-template-columns:1fr;padding:26px 20px}}
 
+/* zonas */
+.zonas{list-style:none;margin:0 auto;padding:0;max-width:900px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.zonas li{background:var(--papel);color:var(--marino);font-weight:700;border-radius:999px;padding:8px 18px;box-shadow:0 3px 0 rgba(30,42,90,.12)}
+.zonas-nota{text-align:center;margin:22px auto 50px;max-width:60ch}
 /* faq */
 .faq{max-width:760px;margin:0 auto;display:grid;gap:12px}
 #preguntas .cab{margin-bottom:30px}
@@ -422,6 +442,12 @@ footer{padding-block:34px 110px;text-align:center;color:var(--marino);display:gr
   </div>
 </section>
 
+<section class="wrap" id="zonas" style="padding-top:10px">
+  <div class="cab rev"><h2>Go karts para niños en toda la ciudad</h2><p>Somos un servicio para fiestas infantiles a domicilio: llevamos la pista de go karts de pedal a tu casa, salón, colegio o condominio en la Ciudad de Guatemala y alrededores.</p></div>
+  <ul class="zonas rev" aria-label="Zonas que cubrimos"><li>Zona 1</li><li>Zona 4</li><li>Zona 9</li><li>Zona 10</li><li>Zona 11</li><li>Zona 12</li><li>Zona 13</li><li>Zona 14</li><li>Zona 15</li><li>Zona 16</li><li>Zona 18</li><li>Mixco</li><li>Villa Nueva</li><li>San Miguel Petapa</li><li>Santa Catarina Pinula</li><li>Carretera a El Salvador</li><li>Fraijanes</li><li>San José Pinula</li></ul>
+  <p class="zonas-nota">¿Tu zona no aparece? Escríbenos: fuera de la ciudad cotizamos el traslado aparte.</p>
+</section>
+
 <section class="wrap" id="preguntas" style="padding-top:10px">
   <div class="cab rev"><h2>Todo lo que nos preguntan</h2></div>
   <div class="faq">
@@ -429,6 +455,8 @@ footer{padding-block:34px 110px;text-align:center;color:var(--marino);display:gr
     <details><summary>¿Los karts tienen motor?</summary><p>No. Son karts de pedal y un operador dirige la carrera todo el tiempo.</p></details>
     <details><summary>¿Cuánto espacio necesito?</summary><p>Un espacio plano: patio, cancha, parqueo, salón o grama sintética. Mándanos una foto y te decimos cómo queda la pista.</p></details>
     <details><summary>¿Cómo aparto mi fecha?</summary><p>Con el 50 % de anticipo. Escríbenos por WhatsApp y te mandamos la cotización.</p></details>
+    <details><summary>¿Llegan a la zona 10 y a otras zonas?</summary><p>Sí. Llevamos los go karts a domicilio en zona 10, 14, 15, 16 y toda la Ciudad de Guatemala, además de Mixco, Villa Nueva, Carretera a El Salvador y alrededores. Fuera de la ciudad cotizamos el traslado aparte.</p></details>
+    <details><summary>¿Qué incluye el servicio para fiestas infantiles?</summary><p>Los go karts de pedal, el montaje del circuito con conos, un operador que dirige las carreras y organiza los turnos, el transporte y la recogida al final.</p></details>
   </div>
 </section>
 
